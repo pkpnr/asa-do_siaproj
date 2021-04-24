@@ -101,13 +101,13 @@ label #sidebar_btn:hover{
 	width: 80px;
 }
 
-.content{
-	margin-left: 200px; /*optional if we want moving background according to side bar*/
-	background: url(background.png) no-repeat; /*<----- changable background*/
+/*.content{
+	margin-left: 200px; optional if we want moving background according to side bar
+	background: url(background.png) no-repeat; <----- changable background
 	background-position: center;
 	background-size: cover;
 	height: 100vh;
-	transition: 0.5s;
+	transition: 0.5s;*/
 }
 
 #check:checked ~ .content{
@@ -116,4 +116,20 @@ label #sidebar_btn:hover{
 
 #check{
 	display: none;
+}
+
+.text{
+			/* <---- changable text background color*/
+	color: black;
+	position: fixed;
+	width: 1000px;
+	height: 350px;
+	padding: 15px;
+	margin-left: 250px;
+	top: 150px;
+	transition: 0.5s;
+}
+
+#check:checked ~ .text{
+	margin-left: 100px
 }
