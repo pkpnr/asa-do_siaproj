@@ -12,7 +12,7 @@ body{
 .loginbox{
 	width: 520px;
 	height: 420px;
-	background: #000; /*Color not yet set, this is just temporary color*/
+	background: #000; /*login box Color not yet set, this is just temporary color*/
 	color: #fff;
 	top: 50%;
 	left: 50%;
@@ -45,7 +45,7 @@ body{
 	outline: none;
 	height: 40px;
 	width: 100px;
-	background: #fb2525;
+	background: #fb2525; /*<----login button color*/
 	color: #fff;
 	font-size: 18px;
 	border-radius: 15px;

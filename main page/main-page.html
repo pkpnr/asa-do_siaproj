@@ -1,43 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Main Screen</title>
-	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-	<link rel="stylesheet" href="style.css">
-<script>
-	function openSlideMenu(){
-		document.getElementById('menu').style.width = '250px';
-		document.getElemnetById('content').style.marginLeft = '250px';
-	}
-	function closeSlideMenu(){
-		document.getElementById('menu').style.width = '0';
-		document.getElemnetById('content').style.marginLeft = '0';
-</script>
+	<meta charset="utf-8">
+	<title>Side dashboard</title>
+	<link rel="stylesheet" type="text/css" href="main-page.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
 
-	<div id="content">
+	<input type="checkbox" id="check">
 
-		<span class="slide">
-			<a href="#" onclick="openSlideMenu()">
-				<i class="fas fa-bars"></i>
-			</a>
-		</span>
-
-		<div id="menu" class="nav">
-			<a href="#" class="close" onclick="closeSideMenu()">
-				<i class="fas fa-times"></i>
-			</a>
-			<a href="#">Home</a>
-			<a href="#">About</a>
-			<a href="#">Services</a>
-			<a href="#">Porfolio</a>
+	<header>
+		<label for="check">
+			<i class="fas fa-bars" id="sidebar_btn"></i>
+		</label>
+		<div class="left_area">
+			<h3>Something <span>Here</span></h3>
 		</div>
+		<div class="right_area">
+			<a href="#" class="logout_btn">Logout</a>
+		</div>
+	</header>
 
-		<h1>Responsive animated side bar menu</h1>
+	<div class="sidebar">
+		<a href="#"><i class="fas fa-home"></i><span>Home</span></a>
+		<a href="#"><i class="fas fa-search"></i><span>Search</span></a>
+		<a href="#"><i class="fas fa-info-circle"></i><span>About us</span></a>
+		<a href="#"><i class="fas fa-question-circle"></i><span>Help</span></a>
+		<a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
 	</div>
-		
 
+	<div class="content"></div>
 
 </body>
 </html>
