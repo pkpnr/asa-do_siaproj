@@ -444,7 +444,7 @@ label #sidebar_btn:hover{
 
 #input-color-switch:checked ~ label .color-switch-toggle{
   transform: translateX(2em);
-}
+} 
 
 #input-color-switch:checked ~ .color-switch::before{
   content: "Dark Mode On";
