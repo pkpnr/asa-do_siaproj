@@ -4,6 +4,17 @@
   box-sizing: border-box;
   
 }
+
+:root{
+  --clr-background: #fff;
+  --clr-header: #35A7E8;
+  --clr-sidebar:  #038bca;
+  --clr-sidebarLetter: #000;
+  --clr-textbox: black;
+  --clr-sidebarLU: #Ffff6f;
+
+}
+
 html{
   
   /*--bg: #FCFCFC;
@@ -18,6 +29,7 @@ body{
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
+  background-color: var(--clr-background);
  
   width: 100%;
 
@@ -29,7 +41,7 @@ body{
 }
 header{
 	position: fixed;
-	background: #595b5d; /*<---- header changable*/
+	background: var(--clr-header); /*<---- header changable*/
 	padding: 20px;
 	width: 100%;
 	height: 70px;
@@ -65,7 +77,7 @@ header{
 }
 
 .sidebar{
-	background: #038bca; /*<---- Sidebar color*/
+	background: var(--clr-sidebar); /*<---- Sidebar color*/
 	margin-top: 0px; /*70*/
 	padding-top: 30px;
 	position: fixed;
@@ -78,7 +90,7 @@ header{
 }
 
 .sidebar a{
-	color: #000; /*<---- sidebar letter colors*/
+	color: var(--clr-sidebarLetter); /*<---- sidebar letter colors*/
 	display: block;
 	width: 100%;
 	line-height: 60px;
@@ -90,7 +102,7 @@ header{
 }
 
 .sidebar a:hover{
-	background: #Ffff6f; /*<---- light-up color in the sidebar*/
+	background: var(--clr-sidebarLU); /*<---- light-up color in the sidebar*/
 }
 
 .sidebar i{
@@ -128,7 +140,7 @@ label #sidebar_btn:hover{
 
 .content{
 	/*margin-left: 200px*/; /*optional if we want moving background according to side bar*/
-	background: url(background.png) no-repeat; /*<----- changable background*/
+	background: url(backgrounsd.png) no-repeat; /*<----- changable background*/
 	background-position: center;
 	background-size: cover;
 	height: 100vh;
@@ -151,9 +163,9 @@ label #sidebar_btn:hover{
 }
 
 .text, .mapResult{
-	background: white;/* <---- changable text background color*/
+	background: var(--clr-textbox);/* <---- changable text background color*/
 	opacity: 50%;
-	color: black;
+	color: var(--clr-background);
 	
 	width: 450px;
 	height: 350px;
@@ -379,4 +391,65 @@ label #sidebar_btn:hover{
 }
 .input, button:focus{
   outline: none;
+}
+
+/*dark mode colors */
+.dark-mode {
+  --clr-background: #8A8A8A;
+  --clr-header: #595b5d;
+  --clr-sidebar:  #6D6D6D;
+  --clr-sidebarLU: black;
+  --clr-sidebarLetter: white;
+  --clr-textbox: white;
+}
+
+.wrapper-toggle-switch{
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 510px;
+  margin-left: 10px;
+}
+
+.color-switch{
+  width: 4em;
+  height: 2em;
+  border-radius: 10em;
+  background-color: var(--clr-background);
+  border: 2px solid var(--clr-sidebarLU); 
+  position: absolute;
+  cursor: pointer;
+}
+
+.color-switch-toggle{
+  width: 1.6em;
+  height: 1.6em;
+  background: var(--clr-sidebar);
+  position: absolute;
+  border-radius: 10em;
+  top: 0.1em;
+  left: 0.1em;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.color-switch::before{
+  content: "Light Mode On";
+  position: absolute;
+  display: inline-block;
+  width: 12em;
+  left: 5em;
+  top: 0.4em;
+}
+
+#input-color-switch:checked ~ label .color-switch-toggle{
+  transform: translateX(2em);
+}
+
+#input-color-switch:checked ~ .color-switch::before{
+  content: "Dark Mode On";
+}
+
+#input-color-switch{
+  display: none;
 }
