@@ -143,6 +143,7 @@ label #sidebar_btn:hover{
 	background: url(backgrounsd.png) no-repeat; /*<----- changable background*/
 	background-position: center;
 	background-size: cover;
+  -webkit-background-size: cover;
 	height: 100vh;
 	transition: 0.5s;
 }
@@ -205,6 +206,7 @@ label #sidebar_btn:hover{
 }
 
 .form{
+
   background-color: #fff;
   display: flex;
   width: 800px;
@@ -224,13 +226,13 @@ label #sidebar_btn:hover{
   border-left: 2px solid #f57168;
   cursor: pointer;
 }
-.dropSort, sortList{
+.dropSort{
   position: relative;
   width: 200px;
   padding-right: 10px;
   padding-left: 0px;
   color: #3a3a3a;
-  
+  cursor: pointer;
 }
 
 
@@ -239,9 +241,15 @@ label #sidebar_btn:hover{
   font-size: 21px;
   
 }
+.default-option:hover{
+   color: #f44336;
+}
 .sort-option{
   padding: 5px 3px 0px 40px;
  font-size: 21px;
+}
+.sort-option:hover{
+   color: #f44336;
 }
 
 .dropList ul{
@@ -250,35 +258,38 @@ label #sidebar_btn:hover{
   color: #696969;
   position: absolute;
   top: 50px;
-  left: 0px;
-  width: 150px;
+  left: -25px;
+  width: 200px;
   border-radius: 5px;
   /*display: none;*/
   visibility: hidden;
 }
 .sortList ul{
   list-style: none;
-  background-color: #fff;
+  background-color: darkgrey;
   color: #696969;
   position: absolute;
   top: 50px;
-  left: 17px;
-  width: 150px;
+  left: -20px;
+  width: 200px;
   border-radius: 5px;
   /*display: none;*/
-  visibility: hidden;
+  /*visibility: hidden;*/
 }
+
 .dropdown:hover .dropList ul{
   visibility: visible;
   height: auto;
   transition: .5s;
 }
+
 .dropSort:hover .sortList ul{
   visibility: visible;
   height: auto;
   transition: .5s; 
   
 }
+
 .dropList ul .active{
   display: block;
 }
@@ -318,60 +329,71 @@ label #sidebar_btn:hover{
   }
 .dropList ul li::before{
   content:"";
-  border-width: 0px 8px 8px 0px;
+  border-width: 0px 7px 7px 7px;
   border-style: solid;
   border-color: red transparent;
   position: absolute;
   bottom: 100%;
-  right: 20px;
+  right: 50px;
+
  }
  .sortList ul li::before{
    content:"";
-  border-width: 0px 8px 8px 0px;
+  border-width: 0px 7px 7px 7px;
   border-style: solid;
   border-color: red transparent;
   position: absolute;
   bottom: 100%;
-  right: 20px;
+  right: 45px;
  }
-.dropList ul li: hover{
+.dropList ul li i{
+  margin: 5px;
+ }
+.dropList ul li:hover{
+
   background-color: #fff;
   color: #f44336;
   font-weight: bold;
   border-radius: 5px;
+  cursor: pointer;
 }
-.sortList ul li: hover{
+.sortList ul li:hover{
   background-color: #fff;
   color: #f44336;
   font-weight: bold;
   border-radius: 5px;
+  cursor: pointer;
 }
 .search{
   width: 500px;
   height: 50%;
- 
+  border:0px;
+  outline: none;
 }
-.form: hover{
+.form:hover{
+
   color: #f44336;
   transition: .5s;
   cursor: pointer;
   
   }
+
 .searchInput{
   width: 400px;
   height: 100%;
-  border: 0;
+  border: 0px;
   padding: 15px 5px ;
   color: #3a3a3a;
   font-size: 20px;
+  outline: none;
 }
 .btn{
   background-color: transparent;
-  width: 50px;
+  width: 20px;
   height: 10%;
-  border: 0;
+  border: 0px;
   top: 0px;
-  padding: 0px 100px 0px 460px;
+  margin: 0px 100px 0px 460px;
   display: flex;
   position: relative;
   cursor: pointer;
@@ -385,13 +407,55 @@ label #sidebar_btn:hover{
   color: #f57168;
 
 }
+.btn i:hover{
+  font-size: 24px;
+  color: #9e1409;
+  cursor: pointer;
+
+}
 .btn .fa-search::hover{
   font-size: 24px;
-  color: #e01f10;
+  /*color: #e01f10;*/
+  color: black;
 }
 .input, button:focus{
   outline: none;
 }
+
+.fa-angle-right{
+  float:right;
+
+}
+.sub-menu{
+  display: none;
+
+}
+
+.hover-me:hover .sub-menu{
+
+  position: absolute;
+  display: block;
+  margin-top: -68px;
+  margin-left: 220px;
+  background: rgb(0, 100, 0);
+  height: auto;
+  transition: .5s;
+}
+.sub-menu ul li:hover{
+  
+  font-size: 17px;
+}
+.sub-menu ul li::before{
+   content:"";
+   
+  border-width:  0px 0px 10px 10px;
+  border-style: solid;
+  border-color: red transparent;
+  position: absolute;
+  bottom: 100%;
+  right: 50px;
+  top: 10px;
+ }
 
 /*dark mode colors */
 .dark-mode {
@@ -407,7 +471,7 @@ label #sidebar_btn:hover{
   display:flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 510px;
+  margin-top: 493px;  
   margin-left: 10px;
 }
 
