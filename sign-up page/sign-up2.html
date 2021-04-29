@@ -1,5 +1,4 @@
- <html>
- <head> 
+<html><head> 
   <title>signup form</title>
   <link rel="stylesheet" type="text/css" href="signup.css">
 
@@ -7,32 +6,40 @@
  <body> 
   <!--this is for user name and password sign up-->
   <script src="sign-up.js"></script>
-<div class ="iformWrap"> 
+<div class="iformWrap"> 
   
  <form class="myForm" action="0"> 
     <h3>Sign Up</h3> 
     <table> 
-     <tbody> 
+     <tbody class="tbody"> 
       <tr>
-       <td>Username: </td> 
+       <td>Student ID </td> 
+       <td> <input type="number" id="studentID" onblur="studentID();" placeholder="Enter student ID"> <span id="message7"></span> </td> 
+      </tr> 
+      <tr>
+       <td>Email </td> 
+       <td> <input type="email" id="email" onblur="email();" placeholder="Enter email"> <span id="message8"></span> </td> 
+      </tr> 
+      <tr>
+       <td>Username </td> 
        <td> <input type="text" id="username" onblur="userName();" placeholder="Enter username"> <span id="message3"></span> </td> 
       </tr> 
       <tr> 
-       <td> Passwrord: </td> 
+       <td> Passwrord </td> 
        <td><input type="password" id="passWord" onblur="passW();" placeholder="Enter password"> <span id="message4"></span> </td> 
       </tr> 
       <tr> 
-       <td> Confirm Passwrord: </td> 
+       <td> Confirm Passwrord </td> 
        <td><input type="password" id="confirmPass" onblur="conPass();" placeholder="Re-type password"> <span id="message6"></span> </td> 
       </tr> 
 
-       <tr> 
-       <td><input type="button" value="register" onclick="Submit();" class="button"> </td> 
-      </tr> 
+       
        </tbody> 
-    </table> 
+    </table>
+      
    </form> 
   </div> 
+  <input type="button" value="register" onclick="Submit();" class="btn"> 
 
- </body>
-</html>
+ 
+</body></html>

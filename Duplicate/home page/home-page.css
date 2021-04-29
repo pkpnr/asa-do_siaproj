@@ -1,0 +1,236 @@
+:root{
+  --clr-background: #fff;
+  --clr-header: #35A7E8;
+  --clr-sidebar:  #038bca;
+  --clr-sidebarLetter: #000;
+  --clr-textbox: white;
+  --clr-sidebarLU: #Ffff6f;
+
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+header{
+	position: fixed;
+	background: var(--clr-header); /*<---- header changable*/
+	padding: 20px;
+	width: 100%;
+	height: 30px;
+}
+.container{
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  bottom: 0px;
+  right: 0px; 
+}
+
+.left_area h3{
+	color: #fff;
+	margin: 0;
+	text-transform: uppercase;
+	font-size: 22px;
+	font-weight: 900;
+}
+.right_area{
+	display: inline-flex;
+	float: right;
+}
+
+.login_btn{
+	padding: 5px;
+	background: red;
+	text-decoration: none;
+	margin-top: -30px;
+	margin-right: 30px;
+	border-radius: 2px;
+	font-size: 15px;
+	font-weight: 600;
+	color: #fff;
+	transition: 0.5s;
+	transition-property: background;
+}
+
+.login_btn:hover{
+	background: #0D9DDB;
+
+}
+
+.sign-in_btn{
+	padding: 5px;
+	background: red;
+	text-decoration: none;
+	margin-top: -30px;
+	margin-right: 30px;
+	border-radius: 2px;
+	font-size: 15px;
+	font-weight: 600;
+	color: #fff;
+	transition: 0.5s;
+	transition-property: background;
+}
+
+.sign-in_btn:hover{
+	background: #0D9DDB;
+
+}
+
+.sidebar{
+	background: var(--clr-sidebar); /*<---- Sidebar color*/
+	margin-top: 70px;
+	padding-top: 30px;
+	position: fixed;
+	left: 0;
+	width: 200px;
+	height: 100%;
+	transition: 0.5s;
+	transition-property: left;
+}
+
+.sidebar a{
+	color: var(--clr-sidebarLetter); /*<---- sidebar letter colors*/
+	display: block;
+	width: 100%;
+	line-height: 60px;
+	text-decoration: none;
+	padding-left: 40px;
+	box-sizing: border-box;
+	transition: 0.5s;
+	transition-property: background;
+}
+
+.sidebar a:hover{
+	background: var(--clr-sidebarLU); /*<---- light-up color in the sidebar*/
+}
+
+.sidebar i{
+	padding-right: 10px;
+}
+
+label #sidebar_btn{
+	z-index: 1;
+	color: #fff;
+	position: fixed;
+	cursor: pointer;
+	left: 300px;
+	font-size: 25px;
+	margin: 5px 0;
+	transition: 0.5s;
+	transition-property: color;
+}
+
+label #sidebar_btn:hover{
+	color: #Ffff6f;
+}
+
+#check:checked ~ .sidebar{
+	left: -140px;
+}
+#check:checked ~ .sidebar a span{
+	display: none;
+}
+
+#check:checked ~ .sidebar a{
+	font-size: 20px;
+	margin-left: 120px;
+	width: 80px;
+}
+
+.content{
+	margin-left: 200px; /*optional if we want moving background according to side bar*/
+	background: url(background.png) no-repeat; /*<----- changable background*/
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	transition: 0.5s;
+}
+
+#check:checked ~ .content{
+	margin-left: 60px;  /*effects of resizing background from above*/
+}
+
+#check{
+	display: none;
+}
+
+.text{
+	background: var(--clr-textbox);/* <---- changable text background color*/
+	opacity: 50%;
+	color: var(--clr-sidebarLetter);
+	position: fixed;
+	width: 1000px;
+	height: 350px;
+	padding: 15px;
+	margin-left: 250px;
+	top: 150px;
+	transition: 0.5s;
+}
+
+#check:checked ~ .text{
+	margin-left: 100px
+}
+
+/*dark mode colors */
+.dark-mode {
+  --clr-background: #8A8A8A;
+  --clr-header: #595b5d;
+  --clr-sidebar:  #6D6D6D;
+  --clr-sidebarLU: black;
+  --clr-sidebarLetter: white;
+  --clr-textbox: black;
+}
+
+.wrapper-toggle-switch{
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 510px;
+  margin-left: 10px;
+}
+
+.color-switch{
+  width: 4em;
+  height: 2em;
+  border-radius: 10em;
+  background-color: var(--clr-background);
+  border: 2px solid var(--clr-sidebarLU); 
+  position: absolute;
+  cursor: pointer;
+}
+
+.color-switch-toggle{
+  width: 1.7em;
+  height: 1.7em;
+  background: var(--clr-sidebar);
+  position: absolute;
+  border-radius: 10em;
+  top: 0.2em;
+  left: 0.1em;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.color-switch::before{
+  content: "Light Mode On";
+  position: absolute;
+  display: inline-block;
+  width: 12em;
+  left: 5em;
+  top: 0.4em;
+}
+
+#input-color-switch:checked ~ label .color-switch-toggle{
+  transform: translateX(2em);
+} 
+
+#input-color-switch:checked ~ .color-switch::before{
+  content: "Dark Mode On";
+}
+
+#input-color-switch{
+  display: none;
+}
