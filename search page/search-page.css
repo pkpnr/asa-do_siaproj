@@ -170,7 +170,7 @@ label #sidebar_btn:hover{
 	
 	width: 450px;
 	height: 350px;
-	
+	left: 273px;
 	top: 200px;
 	transition: 0.5s;
 }
@@ -209,15 +209,17 @@ label #sidebar_btn:hover{
 
   background-color: #fff;
   display: flex;
+  position: fixed;
   width: 800px;
   height: 50px;
   padding: 10px;
   right: 0px;
-  left: 0px;
-  bottom: 0px;
+  left: 330px;
+  top: 100px;
   border-radius: 20px;
   box-shadow: 0px 2px 4px 0px rgba(12, 18, 18, 0.5);
 }
+
 .dropdown{
   position: relative;
   width: 160px;
@@ -251,7 +253,7 @@ label #sidebar_btn:hover{
 .sort-option:hover{
    color: #f44336;
 }
-
+/*code for dropdown list Category*/
 .dropList ul{
   list-style: none;
   background-color: #fff;
@@ -262,11 +264,12 @@ label #sidebar_btn:hover{
   width: 200px;
   border-radius: 5px;
   /*display: none;*/
-  visibility: hidden;
+ visibility: hidden;
 }
+/* sort by dropdown menu*/
 .sortList ul{
   list-style: none;
-  background-color: darkgrey;
+  background-color: #fff;
   color: #696969;
   position: absolute;
   top: 50px;
@@ -274,9 +277,11 @@ label #sidebar_btn:hover{
   width: 200px;
   border-radius: 5px;
   /*display: none;*/
-  /*visibility: hidden;*/
+  visibility: hidden;
 }
 
+/*hover for category and sort by*/
+/*
 .dropdown:hover .dropList ul{
   visibility: visible;
   height: auto;
@@ -288,14 +293,18 @@ label #sidebar_btn:hover{
   height: auto;
   transition: .5s; 
   
-}
+  temporary hover to make dropdown list responsive
+  remove comment to see...
 
+} */
+/* possibly for JS code to activate dropdown list*/
 .dropList ul .active{
   display: block;
 }
 .sortList ul .active{
   display: block;
 }
+/* spacing */
 .dropList,  ul li{
   padding: 10px 10px 10px 20px;
 }
@@ -308,6 +317,8 @@ label #sidebar_btn:hover{
 .sortList ul li i{
   margin: 5px;
 }
+
+/* gamay na triangle sa category & sort by*/
 .dropdown::before{
   content: "" ;
   border-width: 6px 6px 0px 6px;
@@ -331,7 +342,7 @@ label #sidebar_btn:hover{
   content:"";
   border-width: 0px 7px 7px 7px;
   border-style: solid;
-  border-color: red transparent;
+  border-color: #fff transparent;
   position: absolute;
   bottom: 100%;
   right: 50px;
@@ -341,7 +352,7 @@ label #sidebar_btn:hover{
    content:"";
   border-width: 0px 7px 7px 7px;
   border-style: solid;
-  border-color: red transparent;
+  border-color: #fff transparent;
   position: absolute;
   bottom: 100%;
   right: 45px;
@@ -349,21 +360,23 @@ label #sidebar_btn:hover{
 .dropList ul li i{
   margin: 5px;
  }
+ /* para mu color if ma tungnan sa cursor*/
 .dropList ul li:hover{
 
-  background-color: #fff;
+  background-color: #f7e0df;
   color: #f44336;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
 }
 .sortList ul li:hover{
-  background-color: #fff;
+  background-color: #f7e0df;
   color: #f44336;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
 }
+/* user input to search*/
 .search{
   width: 500px;
   height: 50%;
@@ -387,6 +400,7 @@ label #sidebar_btn:hover{
   font-size: 20px;
   outline: none;
 }
+/*search button*/
 .btn{
   background-color: transparent;
   width: 20px;
@@ -426,21 +440,30 @@ label #sidebar_btn:hover{
   float:right;
 
 }
+/* sub menu position*/
 .sub-menu{
+  position: absolute;
+  display: block;
+  margin-top: -75px;
+  margin-left: 215px;
+  background: rgb(0, 100, 0);
+  height: auto;
+  transition: .5s;
   display: none;
 
 }
-
+/* sub menu hover temporary hover to make it responsive(alphabetical, price, proximity) remove comment to see..*/
+/*
 .hover-me:hover .sub-menu{
 
   position: absolute;
   display: block;
-  margin-top: -68px;
-  margin-left: 220px;
+  margin-top: -75px;
+  margin-left: 215px;
   background: rgb(0, 100, 0);
   height: auto;
   transition: .5s;
-}
+}*/
 .sub-menu ul li:hover{
   
   font-size: 17px;
@@ -450,10 +473,10 @@ label #sidebar_btn:hover{
    
   border-width:  0px 0px 10px 10px;
   border-style: solid;
-  border-color: red transparent;
+  border-color: #fff transparent;
   position: absolute;
   bottom: 100%;
-  right: 50px;
+  right: 200px;
   top: 10px;
  }
 
@@ -471,7 +494,7 @@ label #sidebar_btn:hover{
   display:flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 493px;  
+  margin-top: 510px;
   margin-left: 10px;
 }
 
