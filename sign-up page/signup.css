@@ -6,8 +6,6 @@ html{
 }  
 
 body{
-
-  font-family: sans-serif;
   background-image: url(image1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,6 +13,7 @@ body{
   background-position: all;
 
 }
+
 table{
 
   

@@ -1,15 +1,6 @@
-body{
-	margin: 0;
-	padding: 0;
-	font-family: sans-serif;
-}
 
 header{
-	position: fixed;
 	background: #595b5d; /*<---- header changable*/
-	padding: 20px;
-	width: 100%;
-	height: 30px;
 }
 
 .left_area h3{
@@ -20,116 +11,29 @@ header{
 	font-weight: 900;
 }
 
-.logout_btn{
-	padding: 5px;
-	background: #19B3D3;
-	text-decoration: none;
-	float: right;
-	margin-top: -30px;
-	margin-right: 40px;
-	border-radius: 2px;
-	font-size: 15px;
-	font-weight: 600;
-	color: #fff;
-	transition: 0.5s;
-	transition-property: background;
-}
-
-.logout_btn:hover{
-	background: #0D9DDB;
-
-}
-
 .sidebar{
 	background: #038bca; /*<---- Sidebar color*/
-	margin-top: 70px;
-	padding-top: 30px;
-	position: fixed;
-	left: 0;
-	width: 200px;
-	height: 100%;
-	transition: 0.5s;
-	transition-property: left;
 }
 
 .sidebar a{
 	color: #000; /*<---- sidebar letter colors*/
-	display: block;
-	width: 100%;
-	line-height: 60px;
-	text-decoration: none;
-	padding-left: 40px;
-	box-sizing: border-box;
-	transition: 0.5s;
-	transition-property: background;
 }
 
 .sidebar a:hover{
 	background: #Ffff6f; /*<---- light-up color in the sidebar*/
 }
 
-.sidebar i{
-	padding-right: 10px;
-}
-
-label #sidebar_btn{
-	z-index: 1;
-	color: #fff;
-	position: fixed;
-	cursor: pointer;
-	left: 300px;
-	font-size: 25px;
-	margin: 5px 0;
-	transition: 0.5s;
-	transition-property: color;
-}
-
-label #sidebar_btn:hover{
-	color: #Ffff6f;
-}
-
-#check:checked ~ .sidebar{
-	left: -140px;
-}
-#check:checked ~ .sidebar a span{
-	display: none;
-}
-
-#check:checked ~ .sidebar a{
-	font-size: 20px;
-	margin-left: 120px;
-	width: 80px;
-}
-
 /*.content{
-	margin-left: 200px; optional if we want moving background according to side bar
 	background: url(background.png) no-repeat; <----- changable background
 	background-position: center;
-	background-size: cover;
-	height: 100vh;
-	transition: 0.5s;*/
-}
-
-#check:checked ~ .content{
-	margin-left: 60px;  /*effects of resizing background from above*/
-}
-
-#check{
-	display: none;
+	background-size: cover; */
 }
 
 .text{
 			/* <---- changable text background color*/
 	color: black;
-	position: fixed;
 	width: 1000px;
 	height: 350px;
-	padding: 15px;
 	margin-left: 250px;
 	top: 150px;
-	transition: 0.5s;
-}
-
-#check:checked ~ .text{
-	margin-left: 100px
 }
