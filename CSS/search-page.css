@@ -1,0 +1,375 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+:root{
+  --clr-textbox: black;
+}
+
+html{
+  
+  /*--bg: #FCFCFC;
+  --bg-panel: #EBEBEB;
+  --color-text: #333333;*/
+  min-height: 100vh;
+  width: 100%;
+
+}  
+
+body{
+  background-color: var(--clr-background);
+  width: 100%;
+}
+
+.container1{
+
+	height: 100%;
+	width: 100%;
+}
+
+header{
+	height: 70px;
+}
+
+.sidebar{
+	margin-top: 0px; /*70*/
+}
+
+.content{
+	/*margin-left: 200px*/ /*optional if we want moving background according to side bar*/
+	background: url(../../IMAGES/background.png) no-repeat; /*<----- changable background*/
+	background-position: center;
+	background-size: cover;
+  -webkit-background-size: cover; 
+}
+
+#check:checked ~ .content{
+	margin-left: 0px;  /*effects of resizing background from above*/
+}
+
+
+/* might be the result*/
+
+.result{
+
+	position: fixed;
+}
+
+.text, .mapResult{
+	background: var(--clr-textbox);/* <---- changable text background color*/
+	opacity: 50%;
+	color: var(--clr-background);
+	
+	width: 450px;
+	height: 350px;
+	left: 273px;
+	top: 200px;
+	transition: 0.5s;
+}
+.mapResult{
+    position: fixed;
+	margin-left: 500px;
+	margin-right: 0px;
+	transition: 0.5s;
+	padding: 20px;
+}
+.text{
+	padding: 20px;
+	margin-right: 0px;
+	margin-left: 0px;
+
+}
+
+/* search bar*/
+.con{
+
+	position: fixed;
+}
+.container{
+  top: 15%;
+}
+
+.form{
+
+  background-color: #fff;
+  display: flex;
+  position: fixed;
+  width: 800px;
+  height: 50px;
+  padding: 10px;
+  right: 0px;
+  left: 330px;
+  top: 100px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 4px 0px rgba(12, 18, 18, 0.5);
+}
+
+.dropdown{
+  position: relative;
+  width: 160px;
+  padding-left: 10px;
+  color: #3a3a3a;
+  border-left: 2px solid #f57168;
+  cursor: pointer;
+}
+.dropSort{
+  position: relative;
+  width: 200px;
+  padding-right: 10px;
+  padding-left: 0px;
+  color: #3a3a3a;
+  cursor: pointer;
+}
+
+
+.default-option{
+  padding: 5px 0px 15px 0px;
+  font-size: 21px;
+  
+}
+.default-option:hover{
+   color: #f44336;
+}
+.sort-option{
+  padding: 5px 3px 0px 40px;
+ font-size: 21px;
+}
+.sort-option:hover{
+   color: #f44336;
+}
+/*code for dropdown list Category*/
+.dropList ul{
+  list-style: none;
+  background-color: #fff;
+  color: #696969;
+  position: absolute;
+  top: 50px;
+  left: -25px;
+  width: 200px;
+  border-radius: 5px;
+  /*display: none;*/
+ visibility: hidden;
+}
+/* sort by dropdown menu*/
+.sortList ul{
+  list-style: none;
+  background-color: #fff;
+  color: #696969;
+  position: absolute;
+  top: 50px;
+  left: -20px;
+  width: 200px;
+  border-radius: 5px;
+  /*display: none;*/
+  visibility: hidden;
+}
+
+/*hover for category and sort by*/
+/*
+.dropdown:hover .dropList ul{
+  visibility: visible;
+  height: auto;
+  transition: .5s;
+}
+
+.dropSort:hover .sortList ul{
+  visibility: visible;
+  height: auto;
+  transition: .5s; 
+  
+  temporary hover to make dropdown list responsive
+  remove comment to see...
+
+} */
+/* possibly for JS code to activate dropdown list*/
+.dropList ul .active{
+  display: block;
+}
+.sortList ul .active{
+  display: block;
+}
+/* spacing */
+.dropList,  ul li{
+  padding: 10px 10px 10px 20px;
+}
+.sortList, ul li {
+  padding: 10px 10px 10px 20px;
+}
+.dropList ul li i{
+  margin: 5px;
+}
+.sortList ul li i{
+  margin: 5px;
+}
+
+/* gamay na triangle sa category & sort by*/
+.dropdown::before{
+  content: "" ;
+  border-width: 6px 6px 0px 6px;
+  border-style: solid;
+  border-color: #1d1d1d transparent;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  
+}
+.dropSort::before{
+  content: "" ;
+  border-width: 6px 6px 0px 6px;
+  border-style: solid;
+  border-color: #1d1d1d transparent;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  }
+.dropList ul li::before{
+  content:"";
+  border-width: 0px 7px 7px 7px;
+  border-style: solid;
+  border-color: #fff transparent;
+  position: absolute;
+  bottom: 100%;
+  right: 50px;
+
+ }
+ .sortList ul li::before{
+   content:"";
+  border-width: 0px 7px 7px 7px;
+  border-style: solid;
+  border-color: #fff transparent;
+  position: absolute;
+  bottom: 100%;
+  right: 45px;
+ }
+.dropList ul li i{
+  margin: 5px;
+ }
+ /* para mu color if ma tungnan sa cursor*/
+.dropList ul li:hover{
+
+  background-color: #f7e0df;
+  color: #f44336;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.sortList ul li:hover{
+  background-color: #f7e0df;
+  color: #f44336;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* user input to search*/
+.search{
+  width: 500px;
+  height: 50%;
+  border:0px;
+  outline: none;
+}
+.form:hover{
+
+  color: #f44336;
+  transition: .5s;
+  cursor: pointer;
+  
+  }
+
+.searchInput{
+  width: 400px;
+  height: 100%;
+  border: 0px;
+  padding: 15px 5px ;
+  color: #3a3a3a;
+  font-size: 20px;
+  outline: none;
+}
+/*search button*/
+.btn{
+  background-color: transparent;
+  width: 20px;
+  height: 10%;
+  border: 0px;
+  top: 0px;
+  margin: 0px 100px 0px 460px;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+.search .btn{
+	top: -25px;
+	position:  relative;
+}
+.btn .fa-search{
+  font-size: 22px;
+  color: #f57168;
+
+}
+.btn i:hover{
+  font-size: 24px;
+  color: #9e1409;
+  cursor: pointer;
+
+}
+.btn .fa-search::hover{
+  font-size: 24px;
+  /*color: #e01f10;*/
+  color: black;
+}
+
+.input, button:focus{
+  outline: none;
+}
+
+.fa-angle-right{
+  float:right;
+
+}
+/* sub menu position*/
+.sub-menu{
+  position: absolute;
+  display: block;
+  margin-top: -75px;
+  margin-left: 215px;
+  background: rgb(0, 100, 0);
+  height: auto;
+  transition: .5s;
+  display: none;
+
+}
+/* sub menu hover temporary hover to make it responsive(alphabetical, price, proximity) remove comment to see..*/
+/*
+.hover-me:hover .sub-menu{
+
+  position: absolute;
+  display: block;
+  margin-top: -75px;
+  margin-left: 215px;
+  background: rgb(0, 100, 0);
+  height: auto;
+  transition: .5s;
+}*/
+.sub-menu ul li:hover{
+  
+  font-size: 17px;
+}
+.sub-menu ul li::before{
+   content:"";
+   
+  border-width:  0px 0px 10px 10px;
+  border-style: solid;
+  border-color: #fff transparent;
+  position: absolute;
+  bottom: 100%;
+  right: 200px;
+  top: 10px;
+ }
+
+.color-switch-toggle{
+  width: 1.6em;
+  height: 1.6em;
+  top: 0.1em;
+}

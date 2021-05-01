@@ -1,0 +1,45 @@
+<?php
+	$pgNm = 'Help';
+	$pgFileNm = 'help-page.php';
+	include 'header_main_ASADO.php';
+?>
+
+	<div class="slider">
+		<div class="slides">
+
+			<input type="radio" name="radio-btn" id="radio1">
+			<input type="radio" name="radio-btn" id="radio2">
+			<input type="radio" name="radio-btn" id="radio3">
+
+
+			<div class="slide first">
+				<img src="../IMAGES/help-p1.jpg" alt="">
+			</div>
+
+			<div class="slide">
+				<img src="../IMAGES/help-p2.jpg" alt="">
+			</div>
+
+			<div class="slide">
+				<img src="../IMAGES/help-p4.jpg" alt="">
+			</div>
+
+		</div>
+
+		<div class="navigation-manual">
+			<label for="radio1" class="manual-btn"></label>
+			<label for="radio2" class="manual-btn"></label>
+			<label for="radio3" class="manual-btn"></label>
+			
+		</div>
+
+		
+	</div>
+
+	<div class="content"></div>
+
+	<div class="container">
+
+<?php
+	include 'footer_main_ASADO.php';
+?>
