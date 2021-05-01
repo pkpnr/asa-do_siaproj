@@ -8,9 +8,24 @@
 
 }
 
-body{
+html
+{
 	margin: 0;
 	padding: 0;
+	display: flex;
+	
+	justify-content: center;
+	align-items: center;
+}
+
+body{
+	height: 100%;
+    width: 100%;
+	margin: 0;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	background: white;
 	font-family: sans-serif;
 }
 
@@ -23,18 +38,19 @@ header{
 }
 .container{
   position: absolute;
-  top: 20%;
+  top: 13%;
   left: 20%;
-  bottom: 0px;
-  right: 0px; 
 }
 
-.left_area h3{
+.left_area h3{	
 	color: #fff;
 	margin: 0;
-	text-transform: uppercase;
+	margin-left: 50px;
 	font-size: 22px;
 	font-weight: 900;
+}
+.left_area span{
+	color: var(--clr-sidebarLU);
 }
 
 .logout_btn{
@@ -94,7 +110,7 @@ label #sidebar_btn{
 	color: #fff;
 	position: fixed;
 	cursor: pointer;
-	left: 300px;
+	left: 200px;
 	font-size: 25px;
 	margin: 5px 0;
 	transition: 0.5s;
@@ -119,11 +135,10 @@ label #sidebar_btn:hover{
 }
 
 .content{
-	margin-left: 200px; /*optional if we want moving background according to side bar*/
-	background: url(background.png) no-repeat; /*<----- changable background*/
+	margin-left: 200px; /*optional if we want moving background according to side bar*/ /*<----- changable background*/
 	background-position: center;
 	background-size: cover;
-	height: 100vh;
+	height: 0vh;
 	transition: 0.5s;
 }
 
@@ -149,7 +164,7 @@ label #sidebar_btn:hover{
 }
 
 #check:checked ~ .text{
-	margin-left: 100px
+	margin-left: 100px;
 }
 
 /*dark mode colors */
@@ -166,7 +181,7 @@ label #sidebar_btn:hover{
   display:flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 510px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 
@@ -211,4 +226,90 @@ label #sidebar_btn:hover{
 
 #input-color-switch{
   display: none;
+}
+/* slider */
+
+.slider{
+	width: 900%;
+	height: 550px;
+	border-radius: 20px;
+	overflow: hidden;
+/*	margin-top: 80px;
+	margin-left: 250px;
+	margin bottom: 0px;*/
+}
+
+.slides{
+	width: 20%;
+	height: 510px;
+	display: flex;
+}
+
+.slides input{
+	display: none;
+}
+
+.slide{
+	width: 15%;
+	transition: 2s;
+}
+
+.slide img{
+	width: 1000px;
+	height: 510px;
+}
+
+
+.slidefirst{
+
+	margin-left: 0px;
+}
+
+.navigation-manual{
+	position: absolute;
+	width: 800px;
+	margin-top: -40px;
+	display: flex;
+	justify-content: center;
+	margin-left: 150px;
+}
+
+.manual-btn{
+	border: 2px solid white;
+	padding: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+	margin-right: 40px;
+}
+
+.manual-btn:hover{
+	background: white;
+}
+
+#radio1:checked ~ .first{
+	margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+	margin-left: -15%;
+}
+
+#radio3:checked ~ .first{
+	margin-left: -30%;
+}
+
+#radio4:checked ~ .first{
+	margin-left: -45%;
+}
+
+#radio5:checked ~ .first{
+	margin-left: -60%;
+}
+
+#radio6:checked ~ .first{
+	margin-left: -75%;
 }

@@ -32,9 +32,13 @@ header{
 .left_area h3{
 	color: #fff;
 	margin: 0;
-	text-transform: uppercase;
+	margin-left: 50px;
+	/*text-transform: uppercase;*/
 	font-size: 22px;
 	font-weight: 900;
+}
+.left_area span{
+	color: var(--clr-sidebarLU);
 }
 
 .logout_btn{
@@ -94,7 +98,7 @@ label #sidebar_btn{
 	color: #fff;
 	position: fixed;
 	cursor: pointer;
-	left: 300px;
+	left: 200px;
 	font-size: 25px;
 	margin: 5px 0;
 	transition: 0.5s;
@@ -137,17 +141,26 @@ label #sidebar_btn:hover{
 
 .text{
 	background: var(--clr-textbox);/* <---- changable text background color*/
-	opacity: 50%;
+	opacity: 70%;
 	color: var(--clr-sidebarLetter);
 	position: fixed;
-	width: 1000px;
-	height: 350px;
+	width: 75%;
+	height: 70%;
 	padding: 15px;
 	margin-left: 250px;
-	top: 150px;
+	top: 90px;
 	transition: 0.5s;
 }
+.text h1{
+	margin-left: 50px;
+	font-size: 40px;
+	font-weight: 900;
+	font-family: fantasy;
+}
 
+.text span{
+	color: red;
+}
 #check:checked ~ .text{
 	margin-left: 100px
 }

@@ -35,9 +35,12 @@ header{
 .left_area h3{
 	color: #fff;
 	margin: 0;
-	text-transform: uppercase;
+	margin-left: 50px;
 	font-size: 22px;
 	font-weight: 900;
+}
+.left_area span{
+	color: var(--clr-sidebarLU);
 }
 
 .logout_btn{
@@ -97,7 +100,7 @@ label #sidebar_btn{
 	color: #fff;
 	position: fixed;
 	cursor: pointer;
-	left: 300px;
+	left: 200px;
 	font-size: 25px;
 	margin: 5px 0;
 	transition: 0.5s;
@@ -137,7 +140,7 @@ label #sidebar_btn:hover{
 
 .text{
 	background: var(--clr-sidebarLetter);/* <---- changable text background color*/
-	opacity: 60%;
+	opacity: 70%;
 	color: var(--clr-textbox);
 	position: fixed;
 	width: 80%;
@@ -148,42 +151,12 @@ label #sidebar_btn:hover{
 	transition: 0.5s;
 }
 
+.text p{
+	padding: 10px;
+}
+
 #check:checked ~ .text{
 	margin-left: 100px
-}
-.box img {
-	width:200px;
-	height:150px;
-}
-.box{
-	padding: 15px;
- 	border: 10px;
-	position: fixed;
-	bottom: 150px;
-	height: 300px;
- 	width: 200px;
- 	border-radius: 10px;
- 	color: var(--clr-sidebarLetter);
- 	background-color: var(--clr-textbox);  
-  	background-clip:border-box;
-  	text-align: center;
-}
-
-}
-#box1 {
-  margin-left: 0px;
-}
-
-#box2 {
-  margin-left: 250px;
-}
-
-#box3 {
-  margin-left: 500px;
-}
-
-#box4 {
-  margin-left: 750px;
 }
 
 /*dark mode colors */
