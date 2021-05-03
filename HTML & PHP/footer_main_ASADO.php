@@ -7,6 +7,6 @@
     </div> 
 
 	</div>
-<script src="../JS/dark mode toggle.js"></script>
+<script src="../../JS/dark mode toggle.js"></script>
 </body>
 </html>

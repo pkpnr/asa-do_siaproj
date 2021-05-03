@@ -1,9 +1,11 @@
+
 body{
-	background: url(../../IMAGES/image1.jpg); /*background not yet set, temporary background*/	
+	background: url(../../IMAGES/ustp.png); /*background not yet set, temporary background*/
 	background-size: cover;
 	background-position: all;
 	background-attachment: scroll;
 	background-repeat: no-repeat;
+	font-family: sans-serif;
 }
 
 .loginbox{

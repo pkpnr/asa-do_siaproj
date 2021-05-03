@@ -1,0 +1,163 @@
+:root{
+	--clr-background: #fff;
+	--clr-header: #35A7E8;
+	--clr-sidebar:  #038bca;
+	--clr-sidebarLetter: #000;
+	--clr-textbox: white;
+	--clr-sidebarLU: #Ffff6f;
+  
+  }
+  
+  body{
+	  margin: 0;
+	  padding: 0;
+	  font-family: sans-serif;
+	  background: url(../../IMAGES/ustp.png) no-repeat; /*<----- changable background*/
+	background-attachment: fixed;
+	  background-position: all;
+	  background-size: cover;
+  }
+  
+  header{
+	  position: absolute;
+	  background: var(--clr-header); /*<---- header changable*/
+	  padding: 20px;
+	  width: 100%;
+	  height: 35px;
+  }
+  
+  .container{
+	position: absolute;
+	width: 80%;
+    top: 20%;
+	left: 20%;
+	bottom: 0px;
+	right: 0px; 
+  }
+  
+  .left_area h3{
+	  color: #fff;
+	  margin: auto;
+	  font-size: 36px;
+	  font-weight: 900;
+  }
+  
+  .left_area span{
+	color: var(--clr-sidebarLU);
+  }
+  
+  .content{
+	  margin-left: 200px; /*optional if we want moving background according to side bar*/
+	  height: 100vh;
+	  transition: 0.5s;
+  }
+  
+  .text{
+	  color: var(--clr-textbox);
+	  position: absolute;
+	  width: 100%;
+	  top: 80px;
+	  margin-left: 50px;
+  }
+  
+  .box img {
+	  width:200px;
+	  height:150px;
+  }
+  .box{
+	  padding: 15px;
+	   border: 10px;
+	  position: absolute;
+	  bottom: 150px;
+	  height: 350px;
+	   width: 250px;
+	   border-radius: 10px;
+	   color: var(--clr-sidebarLetter);
+	   background-color: var(--clr-textbox);  
+		background-clip:border-box;
+		text-align: center;
+  }
+  
+  
+  #box1 {
+	margin-left: 0px;
+  }
+  
+  #box2 {
+	margin-left: 300px;
+  }
+  
+  #box3 {
+	margin-left: 600px;
+  }
+  
+  #box4 {
+	margin-left: 900px;
+  }
+  
+  .information p{
+	  margin-top: 500px;
+  }
+  
+  /*dark mode colors */
+  .dark-mode {
+	--clr-background: #8A8A8A;
+	--clr-header: #595b5d;
+	--clr-sidebar:  #6D6D6D;
+	--clr-sidebarLU: black;
+	--clr-sidebarLetter: white;
+	--clr-textbox: black;
+  }
+  
+  .wrapper-toggle-switch{
+	opacity: 80%;
+	display:flex;
+	justify-content: flex-start;
+	align-items: center;
+	top: 600px;
+	right: 250px;
+	position: fixed;
+  }
+  
+  .color-switch{
+	width: 4em;
+	height: 2em;
+	border-radius: 10em;
+	background-color: var(--clr-background);
+	border: 2px solid var(--clr-sidebarLU); 
+	position: absolute;
+	cursor: pointer;
+  }
+  
+  .color-switch-toggle{
+	width: 1.7em;
+	height: 1.7em;
+	background: var(--clr-sidebar);
+	position: absolute;
+	border-radius: 10em;
+	top: 0.2em;
+	left: 0.1em;
+	cursor: pointer;
+	transition: all 250ms ease-in-out;
+  }
+  
+  .color-switch::before{
+	content: "Light Mode On";
+	position: absolute;
+	display: inline-block;
+	width: 12em;
+	left: 5em;
+	top: 0.4em;
+  }
+  
+  #input-color-switch:checked ~ label .color-switch-toggle{
+	transform: translateX(2em);
+  } 
+  
+  #input-color-switch:checked ~ .color-switch::before{
+	content: "Dark Mode On";
+  }
+  
+  #input-color-switch{
+	display: none;
+  }

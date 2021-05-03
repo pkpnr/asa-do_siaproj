@@ -1,3 +1,5 @@
+
+
 html{
   
   min-height: 100vh;
@@ -6,12 +8,12 @@ html{
 }  
 
 body{
-  background-image: url(../../IMAGES/image1.jpg);
+  background-image: url(../../IMAGES/ustp.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: all;
-
+  font-family: sans-serif;
 }
 
 table{
@@ -120,6 +122,6 @@ p{
 .myForm{
   
   padding-right: 100px;
-  
+  font-family: sans-serif;
 }
 

@@ -7,13 +7,19 @@ function firstName() {
     document.getElementById("message1").style.color="green";
     document.getElementById("message1").innerHTML="ok";
     return true;
- } 
-  else{
+ }
+  else if (fName.length == 0){
    document.getElementById("message1").style.color="red";
+    document.getElementById("message1").innerHTML="Enter name";
+   return false;
+   }
+   else{
+    document.getElementById("message1").style.color="red";
     document.getElementById("message1").innerHTML="invalid";
    return false;
    }
-  }
+ }
+  
 function lastName() {
 
   var lName = document.getElementById("lastname").value; 
@@ -23,8 +29,14 @@ function lastName() {
     document.getElementById("message2").style.color="green";
     document.getElementById("message2").innerHTML="ok";
     return true;
- } 
-  else{
+ }
+
+  else if (lName.length == 0){
+    document.getElementById("message2").style.color="red";
+    document.getElementById("message2").innerHTML="Enter lastname";
+   return false;
+   }
+   else{
     document.getElementById("message2").style.color="red";
     document.getElementById("message2").innerHTML="invalid";
    return false;
@@ -77,22 +89,39 @@ function passW() {
    return false;
    }
   }
-/*function AGE() { optional
-  
-  var agE = document.getElementById("age").value; 
+function studentID() {
+
+  var studID = document.getElementById("studentID").value; 
  
-  if (agE == ""){
-    document.getElementById("message5").style.color="red";
-    document.getElementById("message5").innerHTML="Please enter age";
-   return false;
- }
+  if (studID.length == 0){
+    
+    document.getElementById("message7").style.color="red";
+    document.getElementById("message7").innerHTML="Enter student ID";
+    return false;
+
+ } 
   else{
-   
-    document.getElementById("message5").style.color="green";
-    document.getElementById("message5").innerHTML="ok";
+   document.getElementById("message7").style.color="green";
+    document.getElementById("message7").innerHTML="ok";
    return true;
    }
-  }*/
+  }
+function email(){
+
+    var em =  document.getElementById("email").value;
+
+      if (em.length == 0){
+    
+         document.getElementById("message8").style.color="red";
+         document.getElementById("message8").innerHTML="Enter email";
+           return false;
+ } 
+  else{
+        document.getElementById("message8").style.color="green";
+        document.getElementById("message8").innerHTML="ok";
+          return true;
+   }
+  }
 function conPass(){
   
   var passName = document.getElementById("passWord").value; 
@@ -118,13 +147,13 @@ function conPass(){
 
 } 
 function Submit() {
-  var fname = firstName();
-  var lname = lastName();
+  var SID = studentID();
+  var email = email();
   var uname = userName();
   var pasW = passW();
-  var Age = AGE();
+  var confPw = conPass();
   
-  if(fname == false || Age == false || lname == false || uname == false || pasW == false){
+  if(SID == false || email == false || uname == false || pasW == false || confPw == false){
     
     alert("Fill out everything correctly!");
      return false;
@@ -135,3 +164,4 @@ function Submit() {
   return true;
   }
  }
+

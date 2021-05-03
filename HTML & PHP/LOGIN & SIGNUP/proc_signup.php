@@ -8,43 +8,43 @@
         $confPwd = $_POST["re_Pwd"]; 
     
 
-        require_once 'sqldb_ASADO.php';
+        require_once('../sqldb_ASADO.php');
         require_once 'func_login_signup.php';
 
         if(noInpSignup($student_id, $email, $username, $pwd, $confPwd) !== false)
         {
-            header("location: sign-up2.php?invalid=noInp");
+            header("location: sign-up.php?invalid=noInp");
             exit();
         } 
 
         if(inc_SID($student_id) !== false)
         {
-            header("location: sign-up2.php?invalid=wrongSID");
+            header("location: sign-up.php?invalid=wrongSID");
             exit();
         }
 
         if(inc_Email($email) !== false)
         {
-            header("location: sign-up2.php?invalid=wrongEmail");
+            header("location: sign-up.php?invalid=wrongEmail");
             exit();
         }
 
 
         if(inc_UName($username) !== false)
         {
-            header("location: sign-up2.php?invalid=wrongUsername");
+            header("location: sign-up.php?invalid=wrongUsername");
             exit();
         }
 
         if(checkPwds($pwd, $confPwd) !== false)
         {
-            header("location: sign-up2.php?invalid=PwdNoMatch");
+            header("location: sign-up.php?invalid=PwdNoMatch");
             exit();
         }
 
         if(UName_present($conn, $username, $student_id) !== false)
         {
-            header("location: sign-up2.php?invalid=UNameAlreadyTaken");
+            header("location: sign-up.php?invalid=UNameAlreadyTaken");
             exit();
         }
 
@@ -54,7 +54,7 @@
     
     else
     {
-        header("location: sign-up2.php");
+        header("location: sign-up.php");
         exit();
     } 
 

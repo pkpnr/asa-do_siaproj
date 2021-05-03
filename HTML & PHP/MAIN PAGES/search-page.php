@@ -1,7 +1,7 @@
 <?php
 	$pgNm = 'Search';
   $pgFileNm = 'search-page.php';
-	include 'header_main_ASADO.php';
+	include('../header_main_ASADO.php');
 ?>
 
 <div class="content"></div>	
@@ -16,7 +16,6 @@
    <div class="result">
     <div class="text">
       <!-- search result -->
-      <?php include sqldb_ASADO.php; ?>
     </div>
    <!-- map result -->
    <div class="mapResult">
@@ -110,5 +109,5 @@
    
 
 <?php
-	include 'footer_main_ASADO.php';
+	include('../footer_main_ASADO.php');
 ?>

@@ -1,7 +1,7 @@
 <?php
 	$pgNm = 'Home';
 	$pgFileNm = 'home-page.php';
-	include 'header_main_ASADO.php';
+	include('../header_main_ASADO.php');
 ?>
 
 
@@ -21,5 +21,5 @@
 	<div class="container">
 	
 <?php
-	include 'footer_main_ASADO.php';
+	include('../footer_main_ASADO.php');
 ?>

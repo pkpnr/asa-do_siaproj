@@ -21,7 +21,7 @@
     {
         $res;
 
-        if(strlen((string)$student_id) > 10)
+        if(strlen((string)$student_id) > 11)
         {
             $res = true;
         }
@@ -70,7 +70,7 @@
     {
         $res;
 
-        if($pwd == $confPwd)
+        if(!($pwd == $confPwd))
         {
             $res = true;
         }
@@ -89,7 +89,7 @@
 
         if (!mysqli_stmt_prepare($stmt, $sql))
         {
-            header("location: sign-up2.php?invalid=stmtFail");
+            header("location: sign-up.php?invalid=stmtFail");
             exit();
         }
 
@@ -118,19 +118,19 @@
                 (?, ?, ?, ?);";
         $stmt = mysqli_stmt_init($conn);
 
-        if (!mysqli_stmt_prepare($stmt, $conn))
+        if (!mysqli_stmt_prepare($stmt, $sql))
         {
-            header("location: sign-up2.php?invalid=stmtFail");
+            header("location: sign-up.php?invalid=stmtFail");
             exit();
         }
 
         $hashPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
-        mysqli_bind_param($stmt, "isss", $student_id, $email, $username, $hashPwd); //"ssss" = passing four strings
+        mysqli_stmt_bind_param($stmt, "isss", $student_id, $email, $username, $hashPwd); //"ssss" = passing four strings
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
 
-        header("location: sign-up2.php?invalid=none");
+        header("location: sign-up.php?invalid=none");
         exit();
     }
 
@@ -174,7 +174,7 @@
             $_SESSION["SID"] = $UName_present["StudentID"];
             $_SESSION["UName"] = $UName_present["Username"];
 
-            header("location: home-page.php");
+            header("location: ../MAIN PAGES/home-page.php");
             exit();
         }
     }

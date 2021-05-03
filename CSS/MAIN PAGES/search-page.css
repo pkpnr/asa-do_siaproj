@@ -6,7 +6,13 @@
 }
 
 :root{
+  --clr-background: #fff;
+  --clr-header: #35A7E8;
+  --clr-sidebar:  #038bca;
+  --clr-sidebarLetter: #000;
   --clr-textbox: black;
+  --clr-sidebarLU: #Ffff6f;
+
 }
 
 html{
@@ -20,36 +26,139 @@ html{
 }  
 
 body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
   background-color: var(--clr-background);
+ 
   width: 100%;
-}
 
+}
 .container1{
 
 	height: 100%;
 	width: 100%;
 }
-
 header{
+	position: fixed;
+	background: var(--clr-header); /*<---- header changable*/
+	padding: 20px;
+	width: 100%;
 	height: 70px;
 }
 
+
+.left_area h3{
+	color: #fff;
+	margin: 0;
+  margin-left: 50px;
+	font-size: 22px;
+	font-weight: 900;
+}
+
+.left_area span{
+	color: var(--clr-sidebarLU);
+}
+
+.logout_btn{
+	padding: 5px;
+	background: #19B3D3;
+	text-decoration: none;
+	float: right;
+	margin-top: -30px;
+	margin-right: 40px;
+	border-radius: 2px;
+	font-size: 15px;
+	font-weight: 600;
+	color: #fff;
+	transition: 0.5s;
+	transition-property: background;
+}
+
+.logout_btn:hover{
+	background: #0D9DDB;
+
+}
+
 .sidebar{
+	background: var(--clr-sidebar); /*<---- Sidebar color*/
 	margin-top: 0px; /*70*/
+	padding-top: 30px;
+	position: fixed;
+	left: 0;
+	width: 200px;
+	height: 100%;
+	top:70px;
+	transition: 0.5s;
+	transition-property: left;
+}
+
+.sidebar a{
+	color: var(--clr-sidebarLetter); /*<---- sidebar letter colors*/
+	display: block;
+	width: 100%;
+	line-height: 60px;
+	text-decoration: none;
+	padding-left: 40px;
+	box-sizing: border-box;
+	transition: 0.5s;
+	transition-property: background;
+}
+
+.sidebar a:hover{
+	background: var(--clr-sidebarLU); /*<---- light-up color in the sidebar*/
+}
+
+.sidebar i{
+	padding-right: 10px;
+}
+
+label #sidebar_btn{
+	z-index: 1;
+	color: #fff;
+	position: fixed;
+	cursor: pointer;
+	left: 200px;
+	font-size: 25px;
+	margin: 5px 0;
+	transition: 0.5s;
+	transition-property: color;
+}
+
+label #sidebar_btn:hover{
+	color: #Ffff6f;
+}
+
+#check:checked ~ .sidebar{
+	left: -140px;
+}
+#check:checked ~ .sidebar a span{
+	display: none;
+}
+
+#check:checked ~ .sidebar a{
+	font-size: 20px;
+	margin-left: 120px;
+	width: 80px;
 }
 
 .content{
 	/*margin-left: 200px*/ /*optional if we want moving background according to side bar*/
-	background: url(../../IMAGES/background.png) no-repeat; /*<----- changable background*/
+	background: url(../../IMAGES/ustp.png) no-repeat; /*<----- changable background*/
 	background-position: center;
 	background-size: cover;
-  -webkit-background-size: cover; 
+  -webkit-background-size: cover;
+	height: 100vh;
+	transition: 0.5s;
 }
 
 #check:checked ~ .content{
 	margin-left: 0px;  /*effects of resizing background from above*/
 }
 
+#check{
+	display: none;
+}
 
 /* might be the result*/
 
@@ -77,19 +186,27 @@ header{
 	padding: 20px;
 }
 .text{
+	position: fixed;
 	padding: 20px;
 	margin-right: 0px;
 	margin-left: 0px;
 
 }
 
+#check:checked ~ .text{
+	margin-left: 100px
+}
 /* search bar*/
 .con{
 
 	position: fixed;
 }
 .container{
+  position: absolute;
   top: 15%;
+  left: 20%;
+  bottom: 0px;
+  right: 0px; 
 }
 
 .form{
@@ -174,7 +291,6 @@ header{
   height: auto;
   transition: .5s;
 }
-
 .dropSort:hover .sortList ul{
   visibility: visible;
   height: auto;
@@ -182,7 +298,6 @@ header{
   
   temporary hover to make dropdown list responsive
   remove comment to see...
-
 } */
 /* possibly for JS code to activate dropdown list*/
 .dropList ul .active{
@@ -319,7 +434,6 @@ header{
   /*color: #e01f10;*/
   color: black;
 }
-
 .input, button:focus{
   outline: none;
 }
@@ -340,10 +454,9 @@ header{
   display: none;
 
 }
-/* sub menu hover temporary hover to make it responsive(alphabetical, price, proximity) remove comment to see..*/
-/*
-.hover-me:hover .sub-menu{
+/*sub menu hover temporary hover to make it responsive(alphabetical, price, proximity) remove comment to see..*/
 
+.hover-me:hover .sub-menu{
   position: absolute;
   display: block;
   margin-top: -75px;
@@ -351,7 +464,7 @@ header{
   background: rgb(0, 100, 0);
   height: auto;
   transition: .5s;
-}*/
+}
 .sub-menu ul li:hover{
   
   font-size: 17px;
@@ -368,8 +481,63 @@ header{
   top: 10px;
  }
 
+/*dark mode colors */
+.dark-mode {
+  --clr-background: #8A8A8A;
+  --clr-header: #595b5d;
+  --clr-sidebar:  #6D6D6D;
+  --clr-sidebarLU: black;
+  --clr-sidebarLetter: white;
+  --clr-textbox: white;
+}
+
+.wrapper-toggle-switch{
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 510px;
+  margin-left: 10px;
+}
+
+.color-switch{
+  width: 4em;
+  height: 2em;
+  border-radius: 10em;
+  background-color: var(--clr-background);
+  border: 2px solid var(--clr-sidebarLU); 
+  position: absolute;
+  cursor: pointer;
+}
+
 .color-switch-toggle{
   width: 1.6em;
   height: 1.6em;
+  background: var(--clr-sidebar);
+  position: absolute;
+  border-radius: 10em;
   top: 0.1em;
+  left: 0.1em;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.color-switch::before{
+  content: "Light Mode On";
+  position: absolute;
+  display: inline-block;
+  width: 12em;
+  left: 5em;
+  top: 0.4em;
+}
+
+#input-color-switch:checked ~ label .color-switch-toggle{
+  transform: translateX(2em);
+} 
+
+#input-color-switch:checked ~ .color-switch::before{
+  content: "Dark Mode On";
+}
+
+#input-color-switch{
+  display: none;
 }

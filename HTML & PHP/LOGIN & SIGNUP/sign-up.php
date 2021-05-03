@@ -1,14 +1,14 @@
 <html><head> 
   <title>signup form</title>
   <?php 
-    $pgFileNm = 'sign-up2.php';
-    include 'styles.php'; 
+    $pgFileNm = 'sign-up.php';
+    include('../styles_ASADO.php'); 
   ?>
 
  </head> 
  <body> 
   <!--this is for user name and password sign up-->
-  <script src="../JS/signup.js"></script>
+  <script src="../../JS/sign-up.js"></script>
 <div class="iformWrap"> 
   
 
@@ -40,7 +40,7 @@
       </tr> 
       <tr> 
        <td> Confirm Passwrord </td> 
-       <td><input type="password" id="confirmPass" name=re_Pwd onblur="conPass();" placeholder="Re-type password"> <span id="message6"></span> </td> 
+       <td><input type="password" id="confirmPass" name="re_Pwd" onblur="conPass();" placeholder="Re-type password"> <span id="message6"></span> </td> 
       </tr> 
        </tbody> 
     </table>
@@ -58,7 +58,7 @@
 
     
 
-    <td><input type="submit" name="submit" value="Register" class="btn" onclick="Button();"></td>
+    <td><input type="submit" name="submit" value="Register" class="btn" onclick="Button();"></td>      <!--onclick="Button();"*/-->
    </form> 
 
    <?php
