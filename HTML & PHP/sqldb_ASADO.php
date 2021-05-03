@@ -2,7 +2,7 @@
         $dbHost = "localhost"; 
         $dbUsername = "root";
         $dbPassword = "";
-        $dbName = "siaproj";
+        $dbName = "lolo"; //change dbname according to unsay gi-userdefine ninyo na pangalan
         
         $conn = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
 
@@ -12,3 +12,9 @@
         }
         
     ?>
+
+
+
+<?php
+    
+?>
