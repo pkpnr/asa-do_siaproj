@@ -6,7 +6,7 @@
 <html>
 <head>
 	<title>Side dashboard</title>
-	<?php include('../styles_ASADO.php'); ?>
+	<?php include 'styles_ASADO.php'; ?>
 </head>
 <body>
 

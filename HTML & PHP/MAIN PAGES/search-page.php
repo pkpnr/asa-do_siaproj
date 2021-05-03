@@ -16,7 +16,9 @@
    <div class="result">
     <div class="text">
       <!-- search result -->
-    </div>
+    <?php
+      
+    ?>
    <!-- map result -->
    <div class="mapResult">
     <h3>this is gonna be the reslt</h3>
