@@ -62,7 +62,7 @@ header{
 
 .logout_btn{
 	padding: 5px;
-	background: #19B3D3;
+	background: #Ffff6f;
 	text-decoration: none;
 	float: right;
 	margin-top: -30px;
@@ -70,7 +70,7 @@ header{
 	border-radius: 2px;
 	font-size: 15px;
 	font-weight: 600;
-	color: #fff;
+	color: black;
 	transition: 0.5s;
 	transition-property: background;
 }
@@ -82,13 +82,12 @@ header{
 
 .sidebar{
 	background: var(--clr-sidebar); /*<---- Sidebar color*/
-	margin-top: 0px; /*70*/
+	margin-top: 70px; 
 	padding-top: 30px;
 	position: fixed;
 	left: 0;
 	width: 200px;
 	height: 100%;
-	top:70px;
 	transition: 0.5s;
 	transition-property: left;
 }
@@ -190,8 +189,8 @@ label #sidebar_btn:hover{
 	padding: 20px;
 	margin-right: 0px;
 	margin-left: 0px;
-
 }
+
 
 #check:checked ~ .text{
 	margin-left: 100px

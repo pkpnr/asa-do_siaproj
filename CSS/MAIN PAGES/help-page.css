@@ -54,7 +54,7 @@
   
   .logout_btn{
 	  padding: 5px;
-	  background: #19B3D3;
+	  background: #Ffff6f;
 	  text-decoration: none;
 	  float: right;
 	  margin-top: -30px;
@@ -62,7 +62,7 @@
 	  border-radius: 2px;
 	  font-size: 15px;
 	  font-weight: 600;
-	  color: #fff;
+	  color: black;
 	  transition: 0.5s;
 	  transition-property: background;
   }

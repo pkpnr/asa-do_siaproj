@@ -16,23 +16,26 @@
    <div class="result">
     <div class="text">
       <!-- search result -->
-    <?php
-      
-    ?>
-   <!-- map result -->
-   <div class="mapResult">
-    <h3>this is gonna be the reslt</h3>
-   </div>
+      <?php
+        include('../search_res.php');
+      ?>
+    </div>
+      <!-- map result -->
+      <div class="mapResult">
+        <h3>this is gonna be the reslt</h3>
+      </div>
   </div>
  <div class="form"> 
 
   <!-- search bar -->
-  <div class="search"> 
-   <input type="text" class="searchInput" placeholder="Search"> 
-   <div> 
-    <button class="btn" type="submit"><i class="fas fa-search"></i></button> 
-   </div> 
-  </div> 
+  <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
+    <div class="search"> 
+        <input type="text" name="textInp" class="searchInput" placeholder="Search"> 
+        <div> 
+          <button class="btn" type="submit" name="search"><i class="fas fa-search"></i></button> 
+        </div> 
+    </div> 
+  </form>
   <!--  dropdown list category and sort -->
   <div class="dropdown"> 
     <!-- dropdown list category name-->

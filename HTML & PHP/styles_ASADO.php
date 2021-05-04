@@ -18,7 +18,7 @@ $styl_ASADO = [
 
 
 
-<link rel="stylesheet" type="text/css" href="../CSS/reset.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/reset.css">
 
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 

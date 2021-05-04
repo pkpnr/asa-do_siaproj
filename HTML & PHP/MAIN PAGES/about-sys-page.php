@@ -20,7 +20,7 @@
 			The target for this website is for all the new comers to the USTP. Since most of them are not from the area, they will have a hard time navigating in the roads and alley ways, the location for certain establishements and items sold in ceratin stores.
 		</p>
 
-		<a href="about-us-page.php" target="_blank">Click here for more information about us</a>
+		<button type="button" class="btn" onclick="window.location.href='about-us-page.php'" target="_parent">Meet the Project Team</button>
 	</div>
 
 

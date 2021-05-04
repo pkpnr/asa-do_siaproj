@@ -45,7 +45,7 @@ header{
 
 .logout_btn{
 	padding: 5px;
-	background: #19B3D3;
+	background: #Ffff6f;
 	text-decoration: none;
 	float: right;
 	margin-top: -30px;
@@ -53,7 +53,7 @@ header{
 	border-radius: 2px;
 	font-size: 15px;
 	font-weight: 600;
-	color: #fff;
+	color: black;
 	transition: 0.5s;
 	transition-property: background;
 }
@@ -151,8 +151,21 @@ label #sidebar_btn:hover{
 	transition: 0.5s;
 }
 
+
+.text h1
+{
+	font-size: 60px;
+	padding-top: 30px;
+	padding-bottom: 40px;
+}
+
 .text p{
-	padding: 10px;
+	padding-top: 1.25em;
+	line-height: 1.25em;
+	padding-left: 10px;
+	text-indent: 2em;
+	padding-right: 10px;
+	text-align: justify;
 }
 
 #check:checked ~ .text{
@@ -183,7 +196,7 @@ label #sidebar_btn:hover{
   height: 2em;
   border-radius: 10em;
   background-color: var(--clr-background);
-  border: 2px solid var(--clr-sidebarLU); 
+  border: 2px solid var(--clr-sidebarLU);
   position: absolute;
   cursor: pointer;
 }
@@ -220,3 +233,23 @@ label #sidebar_btn:hover{
 #input-color-switch{
   display: none;
 }
+
+.btn{
+ 
+	position: absolute;
+	top: 85%;
+	border: none;
+	outline: none;
+	height: 30px;
+	width: 200px;
+	background: #fb2525; /*<----login button color*/
+	color: #fff;
+	font-size: 18px;
+	border-radius: 15px;
+  
+  }
+
+  .btn:hover{
+	cursor: pointer;
+	background: #ffc107;
+	color: #000;
