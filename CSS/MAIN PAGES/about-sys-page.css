@@ -13,7 +13,7 @@ body{
 	padding: 0;
 	font-family: sans-serif;
 	background: url(../../IMAGES/ustp.png) no-repeat; /*<----- changable background*/
-	background-attachment: scroll;
+	background-attachment: fixed;
 	background-position: all;
 	background-size: cover;
 }
@@ -143,16 +143,20 @@ label #sidebar_btn:hover{
 	opacity: 70%;
 	color: var(--clr-textbox);
 	position: fixed;
-	width: 80%;
+	width: 76%;
 	height: 70%;
 	padding: 15px;
-	margin-left: -50px;
-	top: 100px;
+	margin-left: -35px;
+	top: 90px;
 	transition: 0.5s;
 }
 
 .text p{
 	padding: 10px;
+}
+
+.text a{
+	color: red;
 }
 
 #check:checked ~ .text{
@@ -175,7 +179,7 @@ label #sidebar_btn:hover{
   align-items: center;
   margin-top: 510px;
   margin-left: 10px;
-  position: absolute;
+  position: fixed;
 }
 
 .color-switch{

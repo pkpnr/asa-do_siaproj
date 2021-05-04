@@ -12,8 +12,8 @@
 	  margin: 0;
 	  padding: 0;
 	  font-family: sans-serif;
-	  background: url(../../IMAGES/ustp.png) no-repeat; /*<----- changable background*/
-	background-attachment: fixed;
+	  background: url(../../images/ustp.png) no-repeat; /*<----- changable background*/
+	  background-attachment: fixed;
 	  background-position: all;
 	  background-size: cover;
   }
@@ -30,7 +30,7 @@
 	position: absolute;
 	width: 80%;
     top: 20%;
-	left: 20%;
+	left: 30px;
 	bottom: 0px;
 	right: 0px; 
   }
@@ -56,8 +56,16 @@
 	  color: var(--clr-textbox);
 	  position: absolute;
 	  width: 100%;
-	  top: 80px;
-	  margin-left: 50px;
+	  top: 0px;
+	  margin-left: 0px;
+  }
+
+  .text a{
+  	color: white;
+  }
+
+  #check{
+  	display: none;
   }
   
   .box img {
@@ -114,9 +122,9 @@
 	display:flex;
 	justify-content: flex-start;
 	align-items: center;
-	top: 600px;
+	top: 130px;
 	right: 250px;
-	position: fixed;
+	position: absolute;
   }
   
   .color-switch{

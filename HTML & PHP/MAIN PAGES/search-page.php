@@ -3,7 +3,7 @@
   $pgFileNm = 'search-page.php';
 	include('../header_main_ASADO.php');
 ?>
-
+<link rel="stylesheet" type="text/css" href="../../CSS/lightbox.min.css">
 <div class="content"></div>	
 
 
@@ -21,7 +21,7 @@
     ?>
    <!-- map result -->
    <div class="mapResult">
-    <h3>this is gonna be the reslt</h3>
+      <a href="../../images/Search Page/main-map-3.jpg" data-lightbox="TheMap"><img src="../../images/Search Page/main-map-with-names.jpg"></a>
    </div>
   </div>
  <div class="form"> 
@@ -105,6 +105,7 @@
    </div> 
   </div> 
 </div>
+<script type="text/javascript" src="../../JS/lightbox-plus-jquery.min.js"></script>
  <!-- end of search bar-->
 
   

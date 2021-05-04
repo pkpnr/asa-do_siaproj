@@ -6,13 +6,23 @@
 
 
 	<div class="text">
-		<h3>this is the home page</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<h1>Welcome to the Website!</h1><br>
+		<p>
+			Welcome to <span>Asa-Do?</span> the website that helps you find certain establishment around the school for the new comers in the University of Sciencee and Technology of the Southern Philippines.
+		</p>
+		<p>
+			This website is for finding establishments surrounding USTP in order to help newer students familiarize themselves with their new surroundings
+		</p>
+		<p>
+			If you're new to the website, we suggest you go over to the help page of the website
+		</p>
+		<p>
+			<ol type=1>
+				<li>Navigate through the navigation bar on the left side</li>
+				<li>then click "Help"</li>
+				<li>Once there, the tutorial will be seen, via slide pictures</li>
+			</ol>
+		</p>
 	</div>
 
 	

@@ -8,12 +8,14 @@
   
   }
   
+/*  ::-webkit-scrollbar {
+  	display: none;
+  }*/
   html
   {
 	  margin: 0;
 	  padding: 0;
 	  display: flex;
-	  
 	  justify-content: center;
 	  align-items: center;
   }
@@ -26,6 +28,9 @@
 	  justify-content: center;
 	  align-items: center;
 	  font-family: sans-serif;
+	  background-position: center;
+	  background-size: cover;
+	  background-color: var(--clr-background);
   }
   
   header{
@@ -135,8 +140,6 @@
   
   .content{
 	  margin-left: 200px; /*optional if we want moving background according to side bar*/ /*<----- changable background*/
-	  background-position: center;
-	  background-size: cover;
 	  height: 0vh;
 	  transition: 0.5s;
   }
@@ -182,6 +185,7 @@
 	align-items: center;
 	margin-top: 10px;
 	margin-left: 10px;
+	position: fixed;
   }
   
   .color-switch{
@@ -218,7 +222,7 @@
   #input-color-switch:checked ~ label .color-switch-toggle{
 	transform: translateX(2em);
   } 
-  
+  a
   #input-color-switch:checked ~ .color-switch::before{
 	content: "Dark Mode On";
   }
@@ -265,7 +269,7 @@
   }
   
   .navigation-manual{
-	  position: absolute;
+	  position: fixed;
 	  width: 800px;
 	  margin-top: -40px;
 	  display: flex;
@@ -274,7 +278,7 @@
   }
   
   .manual-btn{
-	  border: 2px solid white;
+	  border: 1px solid black;
 	  padding: 5px;
 	  border-radius: 10px;
 	  cursor: pointer;
@@ -286,7 +290,7 @@
   }
   
   .manual-btn:hover{
-	  background: white;
+	  background: black;
   }
   
   #radio1:checked ~ .first{
@@ -303,12 +307,4 @@
   
   #radio4:checked ~ .first{
 	  margin-left: -45%;
-  }
-  
-  #radio5:checked ~ .first{
-	  margin-left: -60%;
-  }
-  
-  #radio6:checked ~ .first{
-	  margin-left: -75%;
   }
