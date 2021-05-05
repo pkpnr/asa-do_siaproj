@@ -21,7 +21,7 @@
     ?>
    <!-- map result -->
    <div class="mapResult">
-      <a href="../../images/Search Page/main-map-3.jpg" data-lightbox="TheMap"><img src="../../images/Search Page/main-map-with-names.jpg"></a>
+      <a href="../../images/Search Page/Small-map.jpg" data-lightbox="TheMap"><img src="../../images/Search Page/map.jpg"></a>
    </div>
   </div>
  <div class="form"> 

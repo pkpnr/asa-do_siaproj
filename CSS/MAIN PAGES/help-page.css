@@ -8,9 +8,10 @@
   
   }
   
-/*  ::-webkit-scrollbar {
+  ::-webkit-scrollbar {
   	display: none;
-  }*/
+  }
+
   html
   {
 	  margin: 0;
@@ -307,4 +308,8 @@
   
   #radio4:checked ~ .first{
 	  margin-left: -45%;
+  }
+
+  #radio5:checked ~ .first{
+	  margin-left: -60%;
   }
