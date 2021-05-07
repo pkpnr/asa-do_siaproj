@@ -541,3 +541,7 @@ label #sidebar_btn:hover{
 #input-color-switch{
   display: none;
 }
+#lite-mode-switch{
+  display: none;
+}
+

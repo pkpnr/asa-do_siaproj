@@ -9,6 +9,7 @@
 			<h3>ASA-<span>DO?</span></h3>
 		</div>
 </header>
+<img class="remove" src="ustp.png" ></img>
 
 	<div class="container">
 		<div class="text">
@@ -16,41 +17,51 @@
 			<h1>We've got your back.</h1>
 
 			<div class="box" id=box1>
-				<img src="../../IMAGES/About Us/jc.jpg">
+
+				<div class="remove" >
+					<img src="../../images/About Us/jc.jpg">
+				</div>
+				
 				<h2>Jon Clark Paner</h2>
 				<h3>09123456789</h3>
 				<h3>jcpnr01@gmail.com</h3>
 			</div>
 
 			<div class="box" id=box2>
-				<img src="../../IMAGES/About Us/bern.jpg">
+
+				<div class="remove">
+					<img src="../../images/About Us/bern.jpg">
+				</div>
+				
 				<h2>Bern Charrie Gulang</h2>
 				<h3>09123456789</h3>
 				<h3>berncharrie08@gmail.com</h3>
 			</div>
 
 			<div class="box" id=box3>
-				<img src="../../IMAGES/About Us/ryle.jpg">
+
+				<div  class="remove">
+					<img src="../../images/About Us/ryle.jpg">
+				</div>
+
 				<h2>Ryle Glema</h2>
 				<h3>09123456789</h3>
 				<h3>ryleglema.rg@gmail.com</h3>
 			</div>
 
 			<div class="box" id=box4>
-				<img src="../../IMAGES/About Us/rhegie.jpg">
+
+				<div class="remove">
+					<img src="../../images/About Us/rhegie.jpg">
+				</div>
+				
 				<h2>Rhegie Joy Ayag</h2>
 				<h3>09123456789</h3>
 				<h3>rhegie.ayag14@gmail.com</h3>
 			</div>
-		
 		<div class="information">
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Meet the Team
 			</p>
 		</div>
 	</div>

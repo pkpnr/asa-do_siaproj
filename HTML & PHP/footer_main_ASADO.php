@@ -6,7 +6,13 @@
       </label>
     </div> 
 
-	</div>
+    <div class="wrapper-lite-switch">
+       <input type="checkbox" id="lite-mode-switch">
+       <label for="lite-mode-switch" class="lite-switch">
+       	<div class="lite-mode-toggle"></div>
+       </label>
+    </div> 
+
 <script src="../../JS/dark mode toggle.js"></script>
 </body>
 </html>

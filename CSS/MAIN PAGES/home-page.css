@@ -5,6 +5,7 @@
 	--clr-sidebarLetter: #000;
 	--clr-textbox: white;
 	--clr-sidebarLU: #Ffff6f;
+	--clr-BG: url(../../IMAGES/ustp.png);
   
   }
   
@@ -12,6 +13,9 @@
 	  margin: 0;
 	  padding: 0;
 	  font-family: sans-serif;
+	  min-height: 100vh;
+	  width: 100%;
+	  background-color: var( --clr-background);
   }
   
   header{
@@ -124,7 +128,7 @@
   
   .content{
 	  margin-left: 200px; /*optional if we want moving background according to side bar*/
-	  background: url(../../IMAGES/ustp.png) no-repeat; /*<----- changable background*/
+	  background: var(--clr-BG) no-repeat; /*<----- changable background*/
 	  background-attachment: fixed;
 	  background-position: center;
 	  background-size: cover;
@@ -226,3 +230,56 @@
   #input-color-switch{
 	display: none;
   }
+
+  /* lite mode*/
+  .lite-mode{
+  	--clr-BG: none;
+  }
+
+.wrapper-lite-switch{
+
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 0px;
+  margin-left: 250px;
+ 
+}
+.lite-switch{
+  width: 4em;
+  height: 2em;
+  border-radius: 10em;
+  background-color: var(--clr-background);
+  border: 2px solid var(--clr-sidebarLU); 
+  position: absolute;
+  cursor: pointer;
+}
+.lite-mode-toggle{
+  width: 1.7em;
+  height: 1.7em;
+  background: var(--clr-sidebar);
+  position: absolute;
+  border-radius: 10em;
+  top: 0.2em;
+  left: 0.2em;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+.lite-switch::before{
+  content: "Lite Mode Off";
+  position: absolute;
+  display: inline-block;
+  width: 12em;
+  left: 5em;
+  top: 0.4em;
+}
+#lite-mode-switch:checked ~ label .lite-mode-toggle{
+  transform: translateX(2em);
+} 
+#lite-mode-switch:checked ~ .lite-switch::before{
+  content: "Lite Mode On";
+}
+
+#lite-mode-switch{
+  display: none;
+}

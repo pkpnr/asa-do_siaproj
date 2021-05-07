@@ -25,6 +25,10 @@
 	  width: 100%;
 	  height: 35px;
   }
+
+  .hidden{
+  display: none;
+}
   
   .container{
 	position: absolute;
@@ -104,7 +108,8 @@
   }
   
   .information p{
-	  margin-top: 500px;
+  	font-size: 40px;
+	margin-top: 500px;
   }
   
   /*dark mode colors */
@@ -123,7 +128,7 @@
 	justify-content: flex-start;
 	align-items: center;
 	top: 130px;
-	right: 250px;
+	right: 300px;
 	position: absolute;
   }
   
@@ -169,3 +174,53 @@
   #input-color-switch{
 	display: none;
   }
+
+  /*lite mode */
+
+.wrapper-lite-switch{
+
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  top: 180px;
+  right: 300px;
+  position: absolute;
+}
+.lite-switch{
+  width: 4em;
+  height: 2em;
+  border-radius: 10em;
+  background-color: var(--clr-background);
+  border: 2px solid var(--clr-sidebarLU); 
+  position: absolute;
+  cursor: pointer;
+}
+.lite-mode-toggle{
+  width: 1.7em;
+  height: 1.7em;
+  background: var(--clr-sidebar);
+  position: absolute;
+  border-radius: 10em;
+  top: 0.2em;
+  left: 0.2em;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+.lite-switch::before{
+  content: "Lite Mode";
+  position: absolute;
+  display: inline-block;
+  width: 12em;
+  left: 5em;
+  top: 0.4em;
+}
+#lite-mode-switch:checked ~ label .lite-mode-toggle{
+  transform: translateX(2em);
+} 
+#lite-mode-switch:checked ~ .lite-mode::before{
+  content: "Lite Mode On";
+}
+
+#lite-mode-switch{
+  display: none;
+}
