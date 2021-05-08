@@ -186,6 +186,7 @@
 	align-items: center;
 	margin-top: 510px;
 	margin-left: 10px;
+	position: static;
   }
   
   .color-switch{
@@ -243,6 +244,7 @@
   align-items: center;
   margin-top: 0px;
   margin-left: 250px;
+  position: absolute;
  
 }
 .lite-switch{

@@ -5,14 +5,25 @@
   
 }
 
+
 :root{
   --clr-background: #fff;
   --clr-header: #35A7E8;
   --clr-sidebar:  #038bca;
   --clr-sidebarLetter: #000;
-  --clr-textbox: white;
+  --clr-textbox: black;
   --clr-sidebarLU: #Ffff6f;
-
+  --clr-searchbutton: #7673ba;
+  --clr-searchhover: #4a46b8;
+  --clr-listhover: #bfd4db;
+  --clr-dropdownhover: #2117ff;
+  --clr-dropdownborder: #78A2CC;
+  --clr-list: #696969;
+  --clr-listnamehover: #0700a3 ;
+  --clr-searchbar: #fff;
+  --clr-menu: #fff;
+  --clr-textmenu: #696969;
+  --clr-content: transparent;
 }
 
 html{
@@ -26,192 +37,221 @@ html{
 }  
 
 body{
-	margin: 0;
-	padding: 0;
-	font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
   background-color: var(--clr-background);
-  background: url(../../IMAGES/ustp.png) no-repeat; /*<----- changable background*/
-  background-position: center;
-  background-size: cover;
-  -webkit-background-size: cover;
-  width: 100%;
+ 
+   height: 100vh;
+  width: 100%
 
 }
-.container1{
 
-	height: 100%;
-	width: 100%;
-}
 header{
-	position: fixed;
-	background: var(--clr-header); /*<---- header changable*/
-	padding: 20px;
-	width: 100%;
-	height: 70px;
+  position: fixed;
+  background: var(--clr-header); /*<---- header changable*/
+  padding: 20px;
+  width: 100%;
+  height: 70px;
 }
 
 
+.hidden{
+  display: none;
+}
 .left_area h3{
-	color: #fff;
-	margin: 0;
+  color: #fff;
+  margin: 0;
   margin-left: 50px;
-	font-size: 22px;
-	font-weight: 900;
+  /*text-transform: uppercase;*/
+  font-size: 22px;
+  font-weight: 900;
 }
-
 .left_area span{
-	color: var(--clr-sidebarLU);
+  color: var(--clr-sidebarLU);
 }
 
 .logout_btn{
-	padding: 5px;
-	background: #19B3D3;
-	text-decoration: none;
-	float: right;
-	margin-top: -30px;
-	margin-right: 40px;
-	border-radius: 2px;
-	font-size: 15px;
-	font-weight: 600;
-	color: #fff;
-	transition: 0.5s;
-	transition-property: background;
+  padding: 5px;
+  background: #19B3D3;
+  text-decoration: none;
+  float: right;
+  margin-top: -30px;
+  margin-right: 40px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.5s;
+  transition-property: background;
 }
 
 .logout_btn:hover{
-	background: #0D9DDB;
+  background: #0D9DDB;
 
 }
 
 .sidebar{
-	background: var(--clr-sidebar); /*<---- Sidebar color*/
-	margin-top: 0px; /*70*/
-	padding-top: 30px;
-	position: fixed;
-	left: 0;
-	width: 200px;
-	height: 100%;
-	top:70px;
-	transition: 0.5s;
-	transition-property: left;
+background: var(--clr-sidebar); /*<---- Sidebar color*/
+  margin-top: 70px;
+  padding-top: 30px;
+  position: fixed;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  transition: 0.5s;
+  transition-property: left;
 }
 
 .sidebar a{
-	color: var(--clr-sidebarLetter); /*<---- sidebar letter colors*/
-	display: block;
-	width: 100%;
-	line-height: 60px;
-	text-decoration: none;
-	padding-left: 40px;
-	box-sizing: border-box;
-	transition: 0.5s;
-	transition-property: background;
+  color: var(--clr-sidebarLetter); /*<---- sidebar letter colors*/
+  display: block;
+  width: 100%;
+  line-height: 60px;
+  text-decoration: none;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transition-property: background;
 }
 
 .sidebar a:hover{
-	background: var(--clr-sidebarLU); /*<---- light-up color in the sidebar*/
+  background: var(--clr-sidebarLU); /*<---- light-up color in the sidebar*/
 }
 
 .sidebar i{
-	padding-right: 10px;
+  padding-right: 10px;
 }
 
 label #sidebar_btn{
-	z-index: 1;
-	color: #fff;
-	position: fixed;
-	cursor: pointer;
-	left: 200px;
-	font-size: 25px;
-	margin: 5px 0;
-	transition: 0.5s;
-	transition-property: color;
+  z-index: 1;
+  color: #fff;
+  position: fixed;
+  cursor: pointer;
+  left: 200px;
+  font-size: 25px;
+  margin: 5px 0;
+  transition: 0.5s;
+  transition-property: color;
 }
 
 label #sidebar_btn:hover{
-	color: #Ffff6f;
+  color: #Ffff6f;
 }
 
 #check:checked ~ .sidebar{
-	left: -140px;
+  left: -140px;
 }
 #check:checked ~ .sidebar a span{
-	display: none;
+  display: none;
 }
 
 #check:checked ~ .sidebar a{
-	font-size: 20px;
-	margin-left: 120px;
-	width: 80px;
+  font-size: 20px;
+  margin-left: 120px;
+  width: 80px;
 }
 
 .content{
-	/*margin-left: 200px*/ /*optional if we want moving background according to side bar*/
-	height: 100vh;
-	transition: 0.5s;
+  /*margin-left: 200px*/; /*optional if we want moving background according to side bar*/
+  /*<----- changable background*/
+  background-color: var( --clr-background);
+  
+  margin-right: 0px;
+  transition: 0.5s;
+  height: 100vh;
+   width: 100%;
+  
+
+}
+#background{
+
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  height: 100vh;
+   width: 100%;
+
 }
 
 #check:checked ~ .content{
-	margin-left: 0px;  /*effects of resizing background from above*/
+  margin-left: 0px;  /*effects of resizing background from above*/
 }
 
 #check{
-	display: none;
+  display: none;
 }
 
 /* might be the result*/
-
-.result{
-
-	position: fixed;
-}
-
-.text{
-	background: var(--clr-textbox);/* <---- changable text background color*/
-	color: var(--clr-background);
-	width: 450px;
-	height: 350px;
-	left: 273px;
-	top: 200px;
-  position: fixed;
-  padding: 20px;
-	transition: 0.5s;
-}
-.mapResult{
-  left: 500px;
-  top: 0px;
-  position: absolute;
-}
-
-.mapResult img{
-  height: 350px;
-  width: 500px;
-  transition: 1s;
-}
-.mapResult img:hover {
-  filter: contrast(50%);
-  transform: scale(1.05);
-}
-
-#check:checked ~ .text{
-	margin-left: 100px
-}
-/* search bar*/
-.con{
-
-	position: fixed;
-}
 .container{
-  position: absolute;
+  position: static;
+  margin-top: 20px;
   top: 15%;
   left: 20%;
   bottom: 0px;
   right: 0px; 
 }
+.result{
+
+  position: relative;
+  margin-top: -600px;
+}
+
+.text, .mapResult{
+  background: var(--clr-textbox);/* <---- changable text background color*/
+  opacity: 50%;
+  color: var(--clr-background);
+  width: 450px;
+  height: 350px;
+  left: 273px;
+  top: 200px;
+  transition: 0.5s;
+}
+.mapResult{
+  position: fixed;
+  margin-left: 500px;
+  margin-right: 0px;
+  transition: 0.5s;
+  border: 2px solid black
+}
+
+.mapResult img{
+  width: 446px;
+  height: 346px;
+  filter: grayscale(0%);
+  transition: 0.5s;
+}
+
+.mapResult img:hover{
+  filter: grayscale(50%);
+  transform: scale(1.05);
+}
+
+#map img{
+
+  width: 400px;
+  height: 300px;
+  left: 0;
+  top: 0;
+}
+.text{
+  position: fixed;
+  padding: 20px;
+  margin-right: 0px;
+  margin-left: 0px;
+
+}
+
+#check:checked ~ .text{
+  margin-left: 100px
+}
+/* search bar*/
+
 
 .form{
 
-  background-color: #fff;
+  background-color: var(--clr-searchbar);
   display: flex;
   position: fixed;
   width: 800px;
@@ -229,10 +269,10 @@ label #sidebar_btn:hover{
   width: 160px;
   padding-left: 10px;
   color: #3a3a3a;
-  border-left: 2px solid #f57168;
+  border-left: 2px solid var(--clr-dropdownborder);
   cursor: pointer;
 }
-.dropSort{
+.dropdown-sort{
   position: relative;
   width: 200px;
   padding-right: 10px;
@@ -243,81 +283,90 @@ label #sidebar_btn:hover{
 
 
 .default-option{
-  padding: 5px 0px 15px 0px;
+  padding: 5px 0px 5px 0px;
   font-size: 21px;
-  
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
 }
+
 .default-option:hover{
-   color: #f44336;
+   color: var(--clr-dropdownhover);
 }
 .sort-option{
   padding: 5px 3px 0px 40px;
  font-size: 21px;
 }
 .sort-option:hover{
-   color: #f44336;
+   color: var(--clr-dropdownhover);
 }
 /*code for dropdown list Category*/
-.dropList ul{
+.category-list{
+  display: none;
   list-style: none;
-  background-color: #fff;
-  color: #696969;
+  background-color: var(--clr-menu);
+  color: var( --clr-textmenu);
   position: absolute;
-  top: 50px;
-  left: -25px;
-  width: 200px;
   border-radius: 5px;
-  /*display: none;*/
- visibility: hidden;
+  width: 200px; 
+
+
 }
-/* sort by dropdown menu*/
-.sortList ul{
+.category-list ul{
+
   list-style: none;
-  background-color: #fff;
-  color: #696969;
+  background-color: var(--clr-menu);
+  color: var( --clr-textmenu);
   position: absolute;
-  top: 50px;
-  left: -20px;
+  top: 15px;
+  left: -36px;
   width: 200px;
   border-radius: 5px;
-  /*display: none;*/
-  visibility: hidden;
+  display: block;
+  
 }
 
-/*hover for category and sort by*/
-/*
-.dropdown:hover .dropList ul{
-  visibility: visible;
-  height: auto;
-  transition: .5s;
+
+
+/* sort by dropdown menu*/
+.sort-list{
+  list-style: none;
+  background-color: var(--clr-menu);
+  color: var( --clr-textmenu);
+  position: absolute;
+  border-radius: 5px;
+  display: none;
+
 }
-.dropSort:hover .sortList ul{
-  visibility: visible;
-  height: auto;
-  transition: .5s; 
-  
-  temporary hover to make dropdown list responsive
-  remove comment to see...
-} */
-/* possibly for JS code to activate dropdown list*/
-.dropList ul .active{
+.sort-list ul{
+  list-style: none;
+  background-color: var(--clr-menu);
+  color: var( --clr-textmenu);
+  position: absolute;
+  top: 20px;
+  left: -18px;
+  width: 200px;
+  border-radius: 5px;
   display: block;
+ 
 }
-.sortList ul .active{
-  display: block;
-}
+
 /* spacing */
-.dropList,  ul li{
-  padding: 10px 10px 10px 20px;
+.category-list ul li{
+  margin: 5px;
+  padding: 10px;
 }
-.sortList, ul li {
-  padding: 10px 10px 10px 20px;
+.category-list ul li i{
+  margin: 5px;
+  
 }
-.dropList ul li i{
+.sort-list ul li{
+  padding: 10px;
   margin: 5px;
 }
-.sortList ul li i{
+.sort-list ul li i{
   margin: 5px;
+
 }
 
 /* gamay na triangle sa category & sort by*/
@@ -331,7 +380,7 @@ label #sidebar_btn:hover{
   top: 50%;
   
 }
-.dropSort::before{
+.dropdown-sort::before{
   content: "" ;
   border-width: 6px 6px 0px 6px;
   border-style: solid;
@@ -340,44 +389,43 @@ label #sidebar_btn:hover{
   right: 20px;
   top: 50%;
   }
-.dropList ul li::before{
+.category-list ul li::before{
   content:"";
   border-width: 0px 7px 7px 7px;
   border-style: solid;
-  border-color: #fff transparent;
+  border-color: var(--clr-menu) transparent;
   position: absolute;
   bottom: 100%;
   right: 50px;
 
  }
- .sortList ul li::before{
+ .sort-list ul li::before{
+
    content:"";
   border-width: 0px 7px 7px 7px;
   border-style: solid;
-  border-color: #fff transparent;
+  border-color: var(--clr-menu) transparent;
   position: absolute;
   bottom: 100%;
   right: 45px;
  }
-.dropList ul li i{
-  margin: 5px;
- }
- /* para mu color if ma tungnan sa cursor*/
-.dropList ul li:hover{
+ /* hover for cursor*/
+.category-list ul li:hover{
 
-  background-color: #f7e0df;
-  color: #f44336;
+  background-color:  var(--clr-listhover);
+  color: var(--clr-listnamehover);
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
 }
-.sortList ul li:hover{
-  background-color: #f7e0df;
-  color: #f44336;
+.sort-list ul li:hover{
+  background-color: var(--clr-listhover);
+  color:var(--clr-listnamehover);
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
 }
+
 /* user input to search*/
 .search{
   width: 500px;
@@ -385,25 +433,20 @@ label #sidebar_btn:hover{
   border:0px;
   outline: none;
 }
-.form:hover{
 
-  color: #f44336;
-  transition: .5s;
-  cursor: pointer;
-  
-  }
 
-.searchInput{
+.search-input{
   width: 400px;
   height: 100%;
   border: 0px;
   padding: 15px 5px ;
   color: #3a3a3a;
+  background-color: transparent;
   font-size: 20px;
   outline: none;
 }
 /*search button*/
-.btn{
+.search-button{
   background-color: transparent;
   width: 20px;
   height: 10%;
@@ -414,22 +457,22 @@ label #sidebar_btn:hover{
   position: relative;
   cursor: pointer;
 }
-.search .btn{
-	top: -25px;
-	position:  relative;
+.search .search-button{
+  top: -25px;
+  position:  relative;
 }
-.btn .fa-search{
+.search-button .fa-search{
   font-size: 22px;
-  color: #f57168;
+  color: var(--clr-searchbutton);
 
 }
-.btn i:hover{
+.search-button i:hover{
   font-size: 24px;
-  color: #9e1409;
+  color: var(--clr-searchhover);
   cursor: pointer;
 
 }
-.btn .fa-search::hover{
+.search-button .fa-search::hover{
   font-size: 24px;
   /*color: #e01f10;*/
   color: black;
@@ -443,60 +486,71 @@ label #sidebar_btn:hover{
 
 }
 /* sub menu position*/
+.sub-menu ul{
+  width: 100px;
+}
 .sub-menu{
+
   position: absolute;
-  display: block;
-  margin-top: -75px;
-  margin-left: 215px;
-  background: rgb(0, 100, 0);
+  margin-top: -53px;
+  margin-left: 200px;
   height: auto;
-  transition: .5s;
   display: none;
-
-}
-/*sub menu hover temporary hover to make it responsive(alphabetical, price, proximity) remove comment to see..*/
-
-.hover-me:hover .sub-menu{
-  position: absolute;
-  display: block;
-  margin-top: -75px;
-  margin-left: 215px;
-  background: rgb(0, 100, 0);
-  height: auto;
-  transition: .5s;
-}
-.sub-menu ul li:hover{
   
+}
+.submenu:hover .sub-menu{
+  display: block;
+  height: auto;
+}
+
+.show{
+  display: block;
+}
+
+.sub-menu ul li:hover{
+ 
   font-size: 17px;
 }
 .sub-menu ul li::before{
-   content:"";
-   
+  content:"";
   border-width:  0px 0px 10px 10px;
   border-style: solid;
-  border-color: #fff transparent;
+  border-color: var(--clr-menu) transparent;
   position: absolute;
   bottom: 100%;
-  right: 200px;
+  right: 100px;
   top: 10px;
  }
 
+
 /*dark mode colors */
 .dark-mode {
+
   --clr-background: #8A8A8A;
   --clr-header: #595b5d;
   --clr-sidebar:  #6D6D6D;
   --clr-sidebarLU: black;
   --clr-sidebarLetter: white;
   --clr-textbox: white;
+  --clr-listhover: #e3e3e3;
+  --clr-dropdownhover: #858585;
+  --clr-searchhover: #595b5d;
+  --clr-searchbutton: #6D6D6D;
+  --clr-dropdownborder: black;
+  --clr-listnamehover: #595b5d ;
+  --clr-searchbar: #cfcfcf;
+  --clr-menu:  #6D6D6D;
+   --clr-textmenu: #fff;
+
 }
 
 .wrapper-toggle-switch{
+
   display:flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 510px;
-  margin-left: 10px;
+  margin-top: 580px;
+  margin-left: 230px;
 }
 
 .color-switch{
@@ -541,7 +595,3 @@ label #sidebar_btn:hover{
 #input-color-switch{
   display: none;
 }
-#lite-mode-switch{
-  display: none;
-}
-
