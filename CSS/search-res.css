@@ -6,7 +6,7 @@
 table
 {
     border-collapse: collapse;
-    color: firebrick;
+    color: antiquewhite;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
@@ -21,9 +21,10 @@ tbody
 th
 {
     background-color: firebrick;
-    color: antiquewhite; 
-    border: 5px;
-    height: 40px;
+    height: 3em;
+    padding-top: 17.5px;
+    color: white; 
+    font-weight: bold;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
@@ -41,7 +42,15 @@ tr
 
 tr:nth-child(odd) td
 {
-    background-color: antiquewhite;
+    background-color: firebrick;
+    width: 100%;
+    height: 100%;
+}
+
+tr:nth-child(even) td
+{
+    background-color: darksalmon;
+    color: black;
     width: 100%;
     height: 100%;
 }

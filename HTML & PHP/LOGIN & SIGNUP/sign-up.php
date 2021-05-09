@@ -7,19 +7,20 @@
 
  </head> 
  <body> 
-  <!--this is for user name and password sign up-->
-  <script src="../../JS/sign-up.js"></script>
+
 <div class="iformWrap"> 
   
 
 
 
 
-<!--PAUSAB KO ANI RYLEEE PLS, DLI RECOMMENDED MAG-FORMAT UG CONTENTS THORUGH TABLES, DAPAT MAG-GAMIT UG CSS INSTEAD, THANKYOUUUU-->
 
 
  <form class="myForm" action="proc_signup.php" method="POST"> 
-    <h3>Sign Up</h3> 
+    <h3><b>SIGN UP</b></h3> 
+    <br>
+    <br>
+    <br>
     <table> 
      <tbody class="tbody"> 
       <tr>
@@ -47,7 +48,6 @@
 
 
 
-    <!--PAUSAB KO ANI RYLEEE PLS, DLI RECOMMENDED MAG-FORMAT UG CONTENTS THORUGH TABLES, DAPAT MAG-GAMIT UG CSS INSTEAD, THANKYOUUUU-->
 
 
 
@@ -58,7 +58,9 @@
 
     
 
-    <td><input type="submit" name="submit" value="Register" class="btn" onclick="Button();"></td>      <!--onclick="Button();"*/-->
+    <td><input type="submit" name="submit" value="Register" class="btn" onclick="Button();"></td>  
+    <td><button type="button" class="btn2" onclick="window.location.href='login.php'" target="_parent">Back</button></td>
+    <!--onclick="Button();"*/-->
    </form> 
 
    <?php

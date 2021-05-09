@@ -13,7 +13,7 @@
 			<input type="radio" name="radio-btn" id="radio3">
 			<input type="radio" name="radio-btn" id="radio4">
 			<input type="radio" name="radio-btn" id="radio5">
-			<input type="radio" name="radio-btn" id="radio6">
+
 
 
 			<div class="slide first">
@@ -25,19 +25,15 @@
 			</div>
 
 			<div class="slide">
+				<img src="../../IMAGES/Help Page/help-p3.jpg" alt="">
+			</div>
+
+			<div class="slide">
 				<img src="../../IMAGES/Help Page/help-p4.jpg" alt="">
 			</div>
 
 			<div class="slide">
 				<img src="../../IMAGES/Help Page/help-p5.jpg" alt="">
-			</div>
-
-			<div class="slide">
-				<img src="../../IMAGES/Help Page/help-p6.jpg" alt="">
-			</div>
-
-			<div class="slide">
-				<img src="../../IMAGES/Help Page/help-p7.png" alt="">
 			</div>
 
 		</div>
@@ -48,7 +44,6 @@
 			<label for="radio3" class="manual-btn"></label>
 			<label for="radio4" class="manual-btn"></label>
 			<label for="radio5" class="manual-btn"></label>
-			<label for="radio6" class="manual-btn"></label>
 		</div>
 
 		

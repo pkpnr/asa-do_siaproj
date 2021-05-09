@@ -4,7 +4,8 @@
 	include('../header_main_ASADO.php');
 ?>
 
-<div class="content"></div>	
+<link rel="stylesheet" type="text/css" href="../../CSS/map-expand.css">
+<div class="content"></div>
 
 
 <!--search bar-->
@@ -19,37 +20,38 @@
       <?php
         include('../search_res.php');
       ?>
+
     </div>
       <!-- map result -->
       <div class="mapResult">
-        <h3>this is gonna be the reslt</h3>
+        <!--<br><br><br><br><br><br>-->
+      <a href="../../IMAGES/Search Page/map-small.jpg" data-lightbox="TheMap"><img src="../../IMAGES/Search Page/map-orig.jpg"></a>
       </div>
   </div>
- <div class="form"> 
+
+  <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
+  <div class="form"> 
 
   <!-- search bar -->
-  <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
+  <!--<form action="" method="POST">-->
     <div class="search"> 
         <input type="text" name="textInp" class="searchInput" placeholder="Search"> 
         <div> 
-          <button class="btn" type="submit" name="search"><i class="fas fa-search"></i></button> 
+          <button class="btn" name="search" type="submit"><i class="fas fa-search"></i></button> 
         </div> 
     </div> 
-  </form>
+<!--</form>-->
+
   <!--  dropdown list category and sort -->
   <div class="dropdown"> 
     <!-- dropdown list category name-->
-   <div class="default-option" id=" filter">
-     Category 
-   </div> 
-    <!-- dropdown list for category choices -->
-   <div class="dropList"> 
+   <div class="default-option" onclick="dropdownCategory()">Category</div> 
+    <!-- dropdown list for choices -->
+   <div class="dropList" id="category-filter"> 
 
     <ul> 
-     <li><i class="fas fa-utensils">&nbsp;</i>Food and Beverage</li> 
-     <li><i class="fas fa-pencil-ruler">&nbsp;</i>Stationery</li> 
-     <li><i class="fas fa-laptop">&nbsp;</i>Internet Cafe</li> 
-     <li><i class="fas fa-print">&nbsp;</i>Printing Services</li> 
+     <!--<button onclick="tbSwap()" name="fd&bvr"><li><i class="fas fa-utensils">&nbsp;</i>Food and Beverage</li></button>-->
+     <button type="submit" name="PS"><li><i class="fas fa-print">&nbsp;</i>Printing Services</li></button>
     </ul>
 
    </div> 
@@ -57,26 +59,24 @@
   
   <div class="dropSort">
     <!-- dropdown list sort by name-->
-   <div class="sort-option" id="sort">
-     Sort by 
-   </div> 
+   <div class="sort-option" onclick="sortBy()">Sort/Filter by</div> 
    <!-- dropdown list for sort by choices -->
-   <div class="sortList"> 
+   <div class="sortList" id="sort-filter"> 
 
     <ul>
-      <li class="hover-me">Alphabetical <i class="fa fa-angle-right"></i>
+      <li class="hover-me" name="alpha"> Alphabetical <i class="fa fa-angle-right"></i>
     <!-- sub menu list alphabetical-->
     <div class="sub-menu">
        <ul>
-         <li> A - Z</li>
-         <li> Z - A </li>
+         <button type="submit" name="az"><li> A - Z </li></button>
+         <button type="submit" name="za"><li> Z - A </li></button>
        </ul>
      </div>
 
     </li>
-
-    <li class="hover-me" >Proximity <i class="fa fa-angle-right"></i>
-    <!-- sub menu list proximity-->
+<!--
+    <li class="hover-me" name="prox">Proximity <i class="fa fa-angle-right"></i>
+    <!-sub menu list proximity->
     <div class="sub-menu">
        <ul>
          <li> Nearest</li>
@@ -84,30 +84,28 @@
        </ul>
      </div>
 
-      </li>
-  
-     <li class="hover-me" >Price <i class="fa fa-angle-right"></i>
-      <!-- sub menu list price-->
-      <div class="sub-menu">
-       <ul>
-         <li> Low - High</li>
-         <li> High - Low </li>
-       </ul>
-     </div>
-
-     </li> 
-    
-     <li class="hover-me"> Available Quantity
-     </li>
-     
-     <li class="hover-me">Relevance/ Popularity
-
-     </li> 
+      </li> -->
+        <button type="submit" name="servAvb"><li class="hover-me"> Service Availability </li></button>
+        <button type="submit" name="quant"><li class="hover-me"> Item Quantity </li></button>
     </ul> 
 
    </div> 
   </div> 
+
+
 </div>
+
+</form>
+
+
+
+<script src="../../JS/map-expand.js"></script>
+<script src="../../JS/search-bar.js"></script>
+
+
+
+
+
  <!-- end of search bar-->
 
   

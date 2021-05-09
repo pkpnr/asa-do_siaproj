@@ -19,6 +19,7 @@
 			<input type="text" name="Username" placeholder="Enter Username">
 			<p>Password</p>
 			<input type="password" name="Pwd" placeholder="Enter Password">
+
 			<input type="submit" name="submit" value="Login">
 			<br><br>
 			<a href="sign-up.php">Don't have an account? too bad</a>

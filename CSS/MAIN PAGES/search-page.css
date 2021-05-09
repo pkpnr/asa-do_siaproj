@@ -1,8 +1,8 @@
+
 *{
-  margin: 0;
-  padding: 0;
+  margin: 0; 
+  padding: 0;  
   box-sizing: border-box;
-  
 }
 
 :root{
@@ -10,9 +10,20 @@
   --clr-header: #35A7E8;
   --clr-sidebar:  #038bca;
   --clr-sidebarLetter: #000;
-  --clr-textbox: black;
+  --clr-textbox: white;
   --clr-sidebarLU: #Ffff6f;
-
+  --clr-searchbutton: #7673ba;
+  --clr-searchhover: #4a46b8;
+  --clr-listhover: #bfd4db;
+  --clr-dropdownhover: #2117ff;
+  --clr-dropdownborder: #78A2CC;
+  --clr-list: #696969;
+  --clr-listnamehover: #0700a3 ;
+  --clr-searchbar: #fff;
+  --clr-menu: #fff;
+  --clr-textmenu: #696969;
+  --clr-content: transparent;
+  --clr-BG: url(../../IMAGES/ustp.png) no-repeat;
 }
 
 html{
@@ -30,8 +41,10 @@ body{
 	padding: 0;
 	font-family: sans-serif;
   background-color: var(--clr-background);
- 
-  width: 100%;
+  background: var(--clr-BG);
+	background-position: center;
+	background-size: cover;
+  -webkit-background-size: cover;
 
 }
 .container1{
@@ -47,7 +60,9 @@ header{
 	height: 70px;
 }
 
-
+/*.hidden{
+  display: none;
+}*/
 .left_area h3{
 	color: #fff;
 	margin: 0;
@@ -66,7 +81,7 @@ header{
 	text-decoration: none;
 	float: right;
 	margin-top: -30px;
-	margin-right: 40px;
+  margin-left: 10px;
 	border-radius: 2px;
 	font-size: 15px;
 	font-weight: 600;
@@ -142,11 +157,7 @@ label #sidebar_btn:hover{
 }
 
 .content{
-	/*margin-left: 200px*/ /*optional if we want moving background according to side bar*/
-	background: url(../../IMAGES/ustp.png) no-repeat; /*<----- changable background*/
-	background-position: center;
-	background-size: cover;
-  -webkit-background-size: cover;
+  margin-left: 200px;
 	height: 100vh;
 	transition: 0.5s;
 }
@@ -160,37 +171,53 @@ label #sidebar_btn:hover{
 }
 
 /* might be the result*/
-
+.container{
+  position: static;
+  margin-top: 20px;
+  top: 15%;
+  left: 20%;
+  bottom: 0px;
+  right: 0px; 
+}
 .result{
 
-	position: fixed;
+	position: relative;
+  margin-top: -600px;
+
 }
 
 .text, .mapResult{
 	background: var(--clr-textbox);/* <---- changable text background color*/
-	opacity: 50%;
 	color: var(--clr-background);
-	
 	width: 450px;
 	height: 350px;
 	left: 273px;
 	top: 200px;
+  position: fixed;
+  padding: 10px;
 	transition: 0.5s;
 }
+
 .mapResult{
-    position: fixed;
+  position: fixed;
+  padding-bottom: 10px;
 	margin-left: 500px;
 	margin-right: 0px;
 	transition: 0.5s;
-	padding: 20px;
-}
-.text{
-	position: fixed;
-	padding: 20px;
-	margin-right: 0px;
-	margin-left: 0px;
+  padding: 5px;
 }
 
+.mapResult img{
+  width: 450px;
+	height: 350px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  transition: 1s;
+}
+.mapResult img:hover {
+  filter: contrast(50%);
+  transform: scale(1.05);
+}
 
 #check:checked ~ .text{
 	margin-left: 100px
@@ -200,13 +227,8 @@ label #sidebar_btn:hover{
 
 	position: fixed;
 }
-.container{
-  position: absolute;
-  top: 15%;
-  left: 20%;
-  bottom: 0px;
-  right: 0px; 
-}
+
+
 
 .form{
 
@@ -228,11 +250,14 @@ label #sidebar_btn:hover{
   width: 160px;
   padding-left: 10px;
   color: #3a3a3a;
-  border-left: 2px solid #f57168;
+  border-left: 2px solid var(--clr-dropdownborder);
   cursor: pointer;
+  display: inline-block;
 }
+
 .dropSort{
   position: relative;
+  display: inline-block;
   width: 200px;
   padding-right: 10px;
   padding-left: 0px;
@@ -242,46 +267,60 @@ label #sidebar_btn:hover{
 
 
 .default-option{
-  padding: 5px 0px 15px 0px;
+  padding: 5px 0px 5px 0px;
   font-size: 21px;
-  
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
 }
 .default-option:hover{
-   color: #f44336;
+  color: var(--clr-dropdownhover);
 }
 .sort-option{
-  padding: 5px 3px 0px 40px;
- font-size: 21px;
+  padding: 5px 3px 0px 20px;
+ font-size: 18px;
 }
 .sort-option:hover{
-   color: #f44336;
+  color: var(--clr-dropdownhover);
 }
 /*code for dropdown list Category*/
+.dropList{
+  display: none;
+  list-style: none;
+  background-color: var(--clr-menu);
+  color: var(--clr-textmenu);
+  position: absolute;
+  border-radius: 5px;
+  width: 200px; 
+
+
+}
+
 .dropList ul{
   list-style: none;
-  background-color: #fff;
-  color: #696969;
+  background-color: var(--clr-menu);
+  color: var(--clr-textmenu);
   position: absolute;
-  top: 50px;
-  left: -25px;
+  top: 15px;
+  left: -36px;
   width: 200px;
   border-radius: 5px;
-  /*display: none;*/
- visibility: hidden;
+  display: block;
 }
+
 /* sort by dropdown menu*/
-.sortList ul{
+/*.dropList ul{
   list-style: none;
-  background-color: #fff;
-  color: #696969;
+  background-color: var(--clr-menu);
+  color: var( --clr-textmenu);
   position: absolute;
-  top: 50px;
-  left: -20px;
+  top: 15px;
+  left: -36px;
   width: 200px;
   border-radius: 5px;
-  /*display: none;*/
-  visibility: hidden;
-}
+  display: block; */
+  /*visibility: hidden;
+}*/
 
 /*hover for category and sort by*/
 /*
@@ -299,22 +338,43 @@ label #sidebar_btn:hover{
   remove comment to see...
 } */
 /* possibly for JS code to activate dropdown list*/
-.dropList ul .active{
-  display: block;
+
+
+.sortList{
+  list-style: none;
+  background-color: var(--clr-menu);
+  color: var(--clr-textmenu);
+  position: absolute;
+  border-radius: 5px;
+  display: none; 
 }
-.sortList ul .active{
-  display: block;
+.sortList ul{
+  list-style: none;
+  background-color: var(--clr-menu);
+  color: var(--clr-textmenu);
+  position: absolute;
+  top: 20px;
+  left: -18px;
+  width: 200px;
+  border-radius: 5px;
+  display: block; 
+ 
 }
 /* spacing */
-.dropList,  ul li{
-  padding: 10px 10px 10px 20px;
+.dropList ul li{
+  margin: 5px;
+  padding: 10px;
 }
-.sortList, ul li {
-  padding: 10px 10px 10px 20px;
-}
+
 .dropList ul li i{
   margin: 5px;
 }
+
+.sortList ul li {
+    padding: 10px;
+    margin: 5px;
+}
+
 .sortList ul li i{
   margin: 5px;
 }
@@ -343,7 +403,7 @@ label #sidebar_btn:hover{
   content:"";
   border-width: 0px 7px 7px 7px;
   border-style: solid;
-  border-color: #fff transparent;
+  border-color: var(--clr-menu) transparent;
   position: absolute;
   bottom: 100%;
   right: 50px;
@@ -353,26 +413,27 @@ label #sidebar_btn:hover{
    content:"";
   border-width: 0px 7px 7px 7px;
   border-style: solid;
-  border-color: #fff transparent;
+  border-color: var(--clr-menu) transparent;
   position: absolute;
   bottom: 100%;
   right: 45px;
  }
+
 .dropList ul li i{
   margin: 5px;
  }
  /* para mu color if ma tungnan sa cursor*/
 .dropList ul li:hover{
 
-  background-color: #f7e0df;
-  color: #f44336;
+  background-color:  var(--clr-listhover);
+  color: var(--clr-listnamehover);
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
 }
 .sortList ul li:hover{
-  background-color: #f7e0df;
-  color: #f44336;
+  background-color: var(--clr-listhover);
+  color:var(--clr-listnamehover);
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
@@ -398,6 +459,7 @@ label #sidebar_btn:hover{
   border: 0px;
   padding: 15px 5px ;
   color: #3a3a3a;
+  background-color: transparent;
   font-size: 20px;
   outline: none;
 }
@@ -419,12 +481,12 @@ label #sidebar_btn:hover{
 }
 .btn .fa-search{
   font-size: 22px;
-  color: #f57168;
+  color: var(--clr-searchbutton);
 
 }
 .btn i:hover{
   font-size: 24px;
-  color: #9e1409;
+  color: var(--clr-searchhover);
   cursor: pointer;
 
 }
@@ -442,27 +504,34 @@ label #sidebar_btn:hover{
 
 }
 /* sub menu position*/
+.sub-menu ul{
+  width: 100px;
+}
 .sub-menu{
   position: absolute;
-  display: block;
-  margin-top: -75px;
-  margin-left: 215px;
-  background: rgb(0, 100, 0);
+  margin-top: -53px;
+  margin-left: 200px;
   height: auto;
-  transition: .5s;
   display: none;
 
 }
+
+
 /*sub menu hover temporary hover to make it responsive(alphabetical, price, proximity) remove comment to see..*/
 
 .hover-me:hover .sub-menu{
   position: absolute;
   display: block;
-  margin-top: -75px;
+  height: auto;
+  /*margin-top: -75px;
   margin-left: 215px;
   background: rgb(0, 100, 0);
   height: auto;
-  transition: .5s;
+  transition: .5s;*/
+}
+
+.show{
+  display: block;
 }
 .sub-menu ul li:hover{
   
@@ -473,10 +542,10 @@ label #sidebar_btn:hover{
    
   border-width:  0px 0px 10px 10px;
   border-style: solid;
-  border-color: #fff transparent;
+  border-color: var(--clr-menu) transparent;
   position: absolute;
   bottom: 100%;
-  right: 200px;
+  right: 100px;
   top: 10px;
  }
 
@@ -488,14 +557,24 @@ label #sidebar_btn:hover{
   --clr-sidebarLU: black;
   --clr-sidebarLetter: white;
   --clr-textbox: white;
+  --clr-listhover: #e3e3e3;
+  --clr-dropdownhover: #858585;
+  --clr-searchhover: #595b5d;
+  --clr-searchbutton: #6D6D6D;
+  --clr-dropdownborder: black;
+  --clr-listnamehover: #595b5d ;
+  --clr-searchbar: #cfcfcf;
+  --clr-menu:  #6D6D6D;
+   --clr-textmenu: #fff;
 }
 
 .wrapper-toggle-switch{
   display:flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 510px;
-  margin-left: 10px;
+  margin-top: 530px;
+  margin-left: 20em;
+  position: fixed;
 }
 
 .color-switch{
@@ -539,4 +618,57 @@ label #sidebar_btn:hover{
 
 #input-color-switch{
   display: none;
+}
+
+/* lite mode*/
+.lite-mode{
+	--clr-BG: none;
+}
+
+.wrapper-lite-switch{
+
+display:flex;
+justify-content: flex-start;
+align-items: center;
+margin-top: 530px;
+margin-left: 700px;
+position: fixed;
+}
+.lite-switch{
+width: 4em;
+height: 2em;
+border-radius: 10em;
+background-color: var(--clr-background);
+border: 2px solid var(--clr-sidebarLU); 
+position: absolute;
+cursor: pointer;
+}
+.lite-mode-toggle{
+width: 1.7em;
+height: 1.7em;
+background: var(--clr-sidebar);
+position: absolute;
+border-radius: 10em;
+top: 0.2em;
+left: 0.2em;
+cursor: pointer;
+transition: all 250ms ease-in-out;
+}
+.lite-switch::before{
+content: "Lite Mode Off";
+position: absolute;
+display: inline-block;
+width: 12em;
+left: 5em;
+top: 0.4em;
+}
+#lite-mode-switch:checked ~ label .lite-mode-toggle{
+transform: translateX(2em);
+} 
+#lite-mode-switch:checked ~ .lite-switch::before{
+content: "Lite Mode On";
+}
+
+#lite-mode-switch{
+display: none;
 }

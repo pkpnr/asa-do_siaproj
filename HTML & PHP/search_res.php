@@ -4,37 +4,102 @@
 <div class="hekhek">
     <table id="tab1">
         <tr id="rowgrp1">
-            <th>Music ID</th>
-            <th>Song Name</th>
-            <th>Artist</th>
-            <th>Album</th>
-            <th>Release Date</th>
-            <th>Duration</th>
-            <th>Genre</th>
-            <th>Language</th>
+            <th>Business Name</th>
+            <th>Address</th>
+            <th>Contact Number</th>
+            <th>Item Name</th>
+            <th>Price/Rate</th>
         </tr>
 
 <?php
         include 'sqldb_ASADO.php';
 
+
         if(isset($_POST["search"]))
         {
             $valSearch = $_POST["textInp"];
 
-            $sql = "SELECT * 
-                    FROM DISCOGRAPHY
-                    WHERE CONCAT(`MusicID`, `SongName`, `Artist`, `Album`, `ReleaseDate`, `Duration`, `Genre`, `Language`)
+            $sql = "SELECT *
+                    FROM gen_Tb
+                    WHERE CONCAT(`bsn_Nm`, `Address`, `Cont_Num`, `itemName`, `Price`)
+                    LIKE '%".$valSearch."%';";
+            
+            $res = mysqli_query($conn, $sql);
+
+            echo showRes($res);
+        }
+        
+        else if(isset($_POST["az"]))
+        {
+            $valSearch = $_POST["textInp"];
+
+            $sql = "SELECT *
+                    FROM gen_Tb
+                    WHERE CONCAT(`bsn_Nm`, `Address`, `Cont_Num`, `itemName`, `Price`)
+                    LIKE '%".$valSearch."%'
+                    ORDER BY bsn_Nm ASC;";
+
+            $res = mysqli_query($conn, $sql);
+
+            echo showRes($res);
+        }
+        else if(isset($_POST["za"]))
+        {
+            $valSearch = $_POST["textInp"];
+
+            $sql = "SELECT *
+                    FROM gen_Tb
+                    WHERE CONCAT(`bsn_Nm`, `Address`, `Cont_Num`, `itemName`, `Price`)
+                    LIKE '%".$valSearch."%'
+                    ORDER BY bsn_Nm DESC;";
+
+            $res = mysqli_query($conn, $sql);
+
+            echo showRes($res);
+        }
+        else if(isset($_POST["quant"]))
+        {
+            $valSearch = $_POST["textInp"];
+
+            $sql = "SELECT *
+                    FROM byQuant
+                    WHERE CONCAT(`bsn_Nm`, `Address`, `Cont_Num`, `itemName`, `Price`)
                     LIKE '%".$valSearch."%';";
 
             $res = mysqli_query($conn, $sql);
-            //$resChe = mysqli_num_rows($res);
 
             echo showRes($res);
         }
+        else if(isset($_POST["servAvb"]))
+        {
+            $valSearch = $_POST["textInp"];
+
+            $sql = "SELECT *
+                    FROM byServAvb
+                    WHERE CONCAT(`bsn_Nm`, `Address`, `Cont_Num`, `srv_Nm`, `SrvRate`)
+                    LIKE '%".$valSearch."%';";
+
+            $res = mysqli_query($conn, $sql);
+
+            echo ServAvb_showRes($res);
+        } 
+        else if(isset($_POST["PS"]))
+        {
+            $valSearch = $_POST["textInp"];
+
+            $sql = "SELECT * 
+                    FROM bsn_Estab
+                    WHERE CONCAT(`bsn_Nm`, `Address`, `Cont_Num`) OR categ_Estab = 'Printing Services'
+                    LIKE '%".$valSearch."%';";
+
+            $res = mysqli_query($conn, $sql);
+
+            echo categ_showRes($res);
+        } 
         else
         {
-            $sql = "SELECT * 
-                    FROM DISCOGRAPHY;";
+            $sql = "SELECT *
+                    FROM gen_Tb;";
 
             $res = mysqli_query($conn, $sql);
 
@@ -42,34 +107,117 @@
 
         }
 
-       /* if ($resChe > 0)
-        {*/
+
+        
             function showRes($r)
             {
                 while ($row = mysqli_fetch_assoc($r))
                 {
-                    echo "<tr><td>" . $row['MusicID'] . "</td><td>"
-                    . $row['SongName'] . "</td><td>"
-                    . $row['Artist'] . "</td><td>"
-                    . $row['Album'] . "</td><td>"
-                    . $row['ReleaseDate'] . "</td><td>"
-                    . $row['Duration'] . "</td><td>"
-                    . $row['Genre'] . "</td><td>"
-                    . $row['Language'] . "</td></tr>";
+                    echo "<tr><td>" . $row['bsn_Nm'] . "</td><td>"
+                    . $row['Address'] . "</td><td>"
+                    . $row['Cont_Num'] . "</td><td>"
+                    . $row['itemName'] . "</td><td>"
+                    . $row['Price'] . "</td></tr>";
                 }
         
                 echo "</table>";
 
             }
-        //}
-        /*
-        else
-        {
-            echo "0 result(s).";
-        }*/
+
+            function ServAvb_showRes($r)
+            {
+                while ($row = mysqli_fetch_assoc($r))
+                {
+                    echo "<tr><td>" . $row['bsn_Nm'] . "</td><td>"
+                    . $row['Address'] . "</td><td>"
+                    . $row['Cont_Num'] . "</td><td>"
+                    . $row['srv_Nm'] . "</td><td>"
+                    . $row['SrvRate'] . "</td></tr>";
+                }
+        
+                echo "</table>";
+
+            }
+
+            function categ_showRes($r)
+            {
+                while ($row = mysqli_fetch_assoc($r))
+                {
+                    echo "<tr><td>" . $row['bsn_Nm'] . "</td><td>"
+                    . $row['Address'] . "</td><td>"
+                    . $row['Cont_Num'] . "</td></tr>";
+                }
+        
+                echo "</table>";
+
+            }
+
+            
 
 ?>
 
 
     </table>
 </div>
+<!--
+<div class="hekhek2" id="noblepowers">
+    <table id="tab1">
+            <tr id="rowgrp1">
+                <th>Business Name</th>
+                <th>Address</th>
+                <th>Contact Number</th>
+            </tr> */
+
+    
+            /*include 'sqldb_ASADO.php';
+
+            if(isset($_POST["fd&bvr"]))
+            {
+                $valSearch = $_POST["textInp"];
+
+                $sql = "SELECT * 
+                        FROM bsn_Estab
+                        WHERE CONCAT(`bsn_Nm`, `Address`, `Cont_Num`) OR categ_Estab = 'Food and Beverage'
+                        LIKE '%".$valSearch."%';";
+
+                $res = mysqli_query($conn, $sql);
+
+                echo categ_showRes($res);
+            } 
+            else if(isset($_POST["PS"]))
+            {
+                $valSearch = $_POST["textInp"];
+
+                $sql = "SELECT * 
+                        FROM bsn_Estab
+                        WHERE CONCAT(`bsn_Nm`, `Address`, `Cont_Num`) OR categ_Estab = 'Printing Services'
+                        LIKE '%".$valSearch."%';";
+
+                $res = mysqli_query($conn, $sql);
+
+                echo categ_showRes($res);
+            } 
+            else
+            {
+                $sql = "SELECT *
+                        FROM gen_Tb;";
+
+                $res = mysqli_query($conn, $sql);
+
+                echo showRes($res);
+
+            }
+
+
+                function categ_showRes($r)
+                {
+                    while ($row = mysqli_fetch_assoc($r))
+                    {
+                        echo "<tr><td>" . $row['bsn_Nm'] . "</td><td>"
+                        . $row['Address'] . "</td><td>"
+                        . $row['Cont_Num'] . "</td></tr>";
+                    }
+            
+                    echo "</table>";
+
+                } */

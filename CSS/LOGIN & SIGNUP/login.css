@@ -1,10 +1,9 @@
 
 body{
 	background: url(../../IMAGES/ustp.png); /*background not yet set, temporary background*/
-	background-size: cover;
+	background-size: auto;
 	background-position: all;
 	background-attachment: scroll;
-	background-repeat: no-repeat;
 	font-family: sans-serif;
 }
 
