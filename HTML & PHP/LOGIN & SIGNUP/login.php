@@ -12,7 +12,7 @@
 	</head>
 <body>
 	<div class = "loginbox">
-	<img src="../../IMAGES/LOGIN & SIGNUP/avatar.png" class="avatar">
+	<img src="../../IMAGES/Login & Signup/avatar.png" class="avatar">
 		<h1>Log In Here</h1>
 		<form action="proc_login.php" method="POST">
 			<p>Username/Student ID</p>
