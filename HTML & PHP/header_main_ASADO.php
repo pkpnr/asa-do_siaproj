@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Side dashboard</title>
+	<title><?php echo $pgNm ?></title>
 	<?php include 'styles_ASADO.php'; ?>
 </head>
 <body>

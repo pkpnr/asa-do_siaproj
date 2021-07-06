@@ -50,8 +50,9 @@
    <div class="dropList" id="category-filter"> 
 
     <ul> 
-     <!--<button onclick="tbSwap()" name="fd&bvr"><li><i class="fas fa-utensils">&nbsp;</i>Food and Beverage</li></button>-->
+     <button type="submit" name="fd&bvr"><li><i class="fas fa-utensils">&nbsp;</i>Food and Beverage</li></button>
      <button type="submit" name="PS"><li><i class="fas fa-print">&nbsp;</i>Printing Services</li></button>
+     <button type="submit" name="BookS"><li>Stationery</li></button>
     </ul>
 
    </div> 
